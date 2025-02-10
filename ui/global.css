@@ -1,0 +1,37 @@
+[data-theme='light'] {
+    --background: rgba(220, 220, 220, 1);;
+    --foreground: black;
+    --backgrPre: rgba(200, 200, 200, 1);
+}
+
+[data-theme='dark'] {
+    --background: black;
+    --foreground: rgba(220, 220, 220, 1);
+    --backgrPre: rgba(50, 50, 50, 1);
+}
+
+body {
+    font-size: 17px;
+    color: var(--foreground);
+    background-color: var(--background);
+}
+
+button {
+    color: var(--foreground);
+    background-color: var(--background);
+    border: 1px solid var(--foreground);
+    margin: 5px;
+}
+
+pre {
+    font-size: 16px;
+    padding: 5px;
+    padding-left: 25px;
+    background-color: var(--backgrPre);
+    border-radius: 10;
+}
+
+b {
+    font-size: 18px;
+    font-weight: bold;
+}
