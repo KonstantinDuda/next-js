@@ -1,0 +1,73 @@
+.formDiv {
+    display: flex;
+}
+
+.theForm {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.formDescription {
+    padding: 10px;
+}
+
+.inputTypes {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    row-gap: 5px;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgba(245, 245, 245, 1);
+    border-radius: 15;
+}
+
+.iTHead {
+    margin: auto;
+    grid-column: 1 / 5;
+}
+
+.iTCouple {
+    display: flex;
+}
+
+.iTInput, .iTDescribe {
+    width: 25%;
+    margin: 5px;
+}
+
+.iTInput {
+    height: 20px;
+}
+
+.iTDescribe {
+    width: 70%;
+}
+
+.iTCoupleFile {
+    height: 30px;
+}
+
+.iTInputFile {
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+@media screen and (max-width:970px) {
+    .inputTypes {
+        grid-template-columns: 50% 50%;
+    }
+
+    .iTHead {
+        grid-column: 1 / 3;
+    }
+}
+
+.iTFormElements {
+    display: grid;
+    margin: 5px;
+    row-gap: 5px;
+    padding: 5px;
+    background-color: rgba(225, 225, 225, 1);
+    border-radius: 15;
+}

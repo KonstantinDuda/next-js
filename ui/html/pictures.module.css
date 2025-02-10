@@ -1,0 +1,38 @@
+.myPicture {
+    background-color:rgba(200, 200, 200, 1);
+    border: 1px solid black;
+    border-radius: 10;
+    width: 90%;
+    
+}
+
+.divTable, .divTableHead, .divTableTr, .divTableTh {
+    margin: 5px;
+    padding: 5px;
+}
+
+.divTable {
+    width: 90%;
+    background-color:rgba(210, 210, 210, 1);
+}
+
+.divTableHead {
+    background-color:rgba(180, 180, 180, 1);
+}
+
+.divTableTr {
+    background-color:rgba(150, 150, 150, 1);
+}
+
+.divTableTh {
+    background-color:rgba(120, 120, 120, 1);
+}
+
+.tableBorder {
+    border-collapse: collapse;
+    width: 90%;
+}
+
+.tableBorderThTd {
+    border: 1px solid black;
+}
