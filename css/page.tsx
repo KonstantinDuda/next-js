@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import MyTransition from "./transition";
+import Tooltip from "./tooltip";
 
 export default function MyCSS() {
     return (
@@ -79,13 +81,56 @@ export default function MyCSS() {
                     float та clear</a></li>
                 <li><a href="https://w3schoolsua.github.io/css/css_inline-block.html#gsc.tab=0">
                     inline-block</a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
+                <li><a href="https://w3schoolsua.github.io/css/css_align.html#gsc.tab=0">
+                    Макет. Вертикальне і горизонтальне вирівнювання</a></li>
+                <li><a href="https://w3schoolsua.github.io/css/css_combinators.html#gsc.tab=0">
+                Комбінатори - взаємозв&#39;язок між селекторами</a></li>
+                    Пробіл - селектор нащадків. (.myClass p &#123;стилі будуть прийматись до 
+                    всіх p що знаходяться всередень цього класу&#125;). <br />
+                    &#62; - дочірній елемент (не зрозумів) <br />
+                    + - сусідній родинний (на одному рівні з елементом і знаходиться одразу 
+                        після нього) <br />
+                    &#126; - батьківський селектор (всі елементи на рівні з цим)
+                <li><a href="https://w3schoolsua.github.io/css/css_pseudo_classes.html#gsc.tab=0">
+                    Псевдо класи</a></li>
+                <li><a href="https://w3schoolsua.github.io/css/css_pseudo_elements.html#gsc.tab=0">
+                    Псевдо елементи</a></li>
+                <li><a href="https://w3schoolsua.github.io/css/css_image_transparency.html#gsc.tab=0">
+                    Прозорість та непрозорість</a></li>
+                <li><a href="https://w3schoolsua.github.io/css/css_navbar.html#gsc.tab=0">
+                    Панель навігації</a></li>
+                <li><a href="https://w3schoolsua.github.io/css/css_dropdowns.html#gsc.tab=0">
+                    Випадаючі списки</a></li>
+                <li><a href="https://w3schoolsua.github.io/css/css_image_gallery.html#google_vignette">
+                    Галерея зображень</a></li>
+                <li><a href="https://w3schoolsua.github.io/css/css_image_sprites.html#gsc.tab=0">
+                    Спрайти зображень</a></li>
+                <li><a href="https://w3schoolsua.github.io/css/css_attribute_selectors.html#gsc.tab=0">
+                    Селектори атрибутів</a></li>
+                <li><a href="https://w3schoolsua.github.io/css/css_form.html#gsc.tab=0">
+                    Форми</a></li>
+                <li><a href="https://w3schoolsua.github.io/css/css_counters.html#gsc.tab=0">
+                    Лічильники</a></li>
+                    <div>
+                        Лічильники подібні до змінних. Користуватись ними можна за допомогою 
+                        властивостей: <ins>counter-reset</ins> - сторення або скидання 
+                        лічильника, <ins>counter-increment</ins> - щбільшення значення, <ins>
+                            content</ins> - вставка згенерованого контенту, <i>
+                            counter</i> або <i>counters</i> - функція що додає значення 
+                            лічильника (є значеннями властивості content). 
+                    </div>
+                <li><a href="">
+                    </a></li>
+                <li><a href="">
+                    </a></li>
+                <li><a href="">
+                    </a></li>
+                <li><a href="">
+                    </a></li>
             </ul>
+
+            <MyTransition />
+            <Tooltip />
             <h3><Link href=".">Повернутись на головну сторінку</Link></h3>
         </>
     );

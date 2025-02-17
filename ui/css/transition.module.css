@@ -1,0 +1,89 @@
+.ruberDiv {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    transition: width 2s;
+}
+
+.ruberDiv:hover {
+    width: 50%;
+}
+
+.animGrid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: black;
+    border-radius: 10;
+}
+
+.animHead {
+    margin: auto;
+    grid-column: 1 / 3;
+    color: white;
+    padding: 10px;
+}
+
+.animOneDescription, .animTwoDescription, .animThreeDescription, .animFourDescription {
+    color: white;
+}
+
+.animContainerOne, .animContainerTwo, .animContainerThree, .animContainerFour {
+    border: 4px solid grey;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.animOne, .animTwo, .animThree, .animFour {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(120, 188, 233, 0.8);
+    animation-duration: 4s;
+}
+
+@keyframes one {
+    from {width: 50px;}
+    to {width: 200px;}
+}
+
+@keyframes two {
+    10% {width: 50px;}
+    50% {width: 200px;}
+    100% {width: 50px;}
+}
+
+@keyframes three {
+    from {width: 50px;}
+    to {width: 200px;}
+}
+
+@keyframes four {
+    10% {width: 50px;}
+    33% {width: 120px;}
+    66% {width: 300px;}
+    100% {width: 100px;}
+}
+
+.animOne {
+    animation-name: one;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+}
+
+.animTwo {
+    animation-name: two;
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+}
+
+.animThree {
+    animation-name: three;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+
+.animFour {
+    animation-name: four;
+    animation-timing-function: ease-in-out;
+} 
+

@@ -4,6 +4,7 @@ import ThemeSwitch from "./theme-switch";
 export default function MyNextThemes() {
     return (
         <>
+        <h2>Зміна теми за допомогою next-themes</h2>
          Бажання змінити тему привело мене до розуміння що я робив цю програму не правильно. 
         В мобільній програмі я з самого початку закладав би можливість зміни теми, а тут я 
         просто вчився і тепер маю певну кількість данних і певну кількість css файлів що 
@@ -22,6 +23,11 @@ export default function MyNextThemes() {
 
         <h3>Думаю варто описати що я зробив:</h3>
         <h4>Створив файл theme-provider в теці ui:</h4>
+        &#8201;  Це якраз те що зіпсувало мені все. Саме про цей файл я написав що він 
+        мені завадив, адже саме після того як я його видалив моя програма почала працювати
+        . <b>Важливо</b> те що зрештую я просто видалив цей файл, але тут згадку про нього 
+        залишу, адже можливо я пізніше зможу розібратись як я можу використати щось з цього. 
+        коректно. <br />
         <pre>
         &#39;use client&#39;<br />
         <br />
@@ -31,7 +37,7 @@ export default function MyNextThemes() {
         <br />
         export default function ThemeProvider(&#123;<br />
         &#8201;     children, <br />
-        &#125;: React.ComponentProps&#60;typeof NextThemesProvider&#60;) &#123;<br />
+        &#125;: React.ComponentProps&#60;typeof NextThemesProvider&#62;) &#123;<br />
         <br />
         &#8201;  const [mounted, setMounted] = useState(false);<br />
         <br />
@@ -47,12 +53,14 @@ export default function MyNextThemes() {
         &#8201;     &#60;/NextThemesProvider&#62;<br />
         &#8201;  );<br />
         &#125;<br />
-        &#8201;  Це якраз те що зіпсувало мені все. Саме про цей файл я написав що він <br />
-        мені завадив, адже саме після того як я його видалив моя програма почала працювати <br />
-        коректно. <br />
         </pre>
 
         <h4>Змінив body у layout.tsx і імпортував theme-provider:</h4>
+        Та зрештую я видалив всі атрибути. Якщо я залишаю attribute мої налаштування злітають.
+        defaultTheme і enableSystem схоже просто не працює, адже сайт завжди вмикається з 
+        темою на якій був закритий (перевіряв вимикаючи і запускаючи сервер).
+        disableTransitionOnChange теж видалив хоча не знаю що він мав би робити. І до html 
+        тегу додав suppressHydrationWarning.
         <pre>
         import &#123; ThemeProvider &#125; from &#39;next-themes&#39;; <br />
         <br />
@@ -68,13 +76,7 @@ export default function MyNextThemes() {
         &#60;/body&#62;<br />
         <br />
 
-        Та зрештую я видалив всі атрибути.  <br />
-        Якщо я залишаю attribute мої налаштування злітають. <br />
-        defaultTheme і enableSystem схоже просто не працює, <br />
-        адже сайт завжди вмикається з темою на якій був закритий  <br />
-        (перевіряв вимикаючи і запускаючи сервер). <br />
-        disableTransitionOnChange теж видалив хоча не знаю що він мав би робити. <br />
-        Tож: <br />
+        Зрештую: <br />
         &#60;body&#62;<br />
         &#8201;   &#60;ThemeProvider&#62; <br />
         &#8201;      &#123;children&#125;<br />
@@ -101,6 +103,7 @@ export default function MyNextThemes() {
         </pre>
 
         <h4>Важливо додати ці самі теми в global.css:</h4>
+        white здався мені занадто яскравим, тому змінив на сірий.
         <pre>
         [data-theme=&#39;light&#39;] &#123; <br />
         &#8201;   --background: rgba(220, 220, 220, 1); <br />

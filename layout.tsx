@@ -11,12 +11,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <title>Мій підручник</title>
+        <link rel="stylesheet" 
+          href="https://fonts.googleapis.com/icon?family=Material+Icons" />
       </head>
       <body>
-        <ThemeProvider
-          defaultTheme="system"
-          enableSystem={true}
-          disableTransitionOnChange={true}
+        <ThemeProvider 
+          themes={['light', 'dark', 'myown']}
+          defaultTheme="dark"
         >
           {children}
         </ThemeProvider>

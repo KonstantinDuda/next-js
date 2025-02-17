@@ -1,0 +1,382 @@
+.switcher {
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-radius: 50;
+    width: 80px;
+    height: 40px;
+    margin: 5px;
+}
+
+.buttonChanger {
+    width: 80px;
+    height: 40px;
+    color: rgba(0, 0, 0, 0);
+    background-color: rgba(255, 0, 0, 0);
+    border: none;
+    position: relative;
+    z-index: 4;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.buttonChanger:hover {
+    cursor: pointer;
+}
+
+:root {
+    --light-wbSunny-size: 30px;
+    --light-wbSunny-color: rgba(255, 215, 0, 1);
+    --light-wbSunny-left: 30%;
+    --light-wbSunny-top: 5%;
+    --light-wbSunny-z: 3;
+    --my-wbSunny-size: 33px;
+    --my-wbSunny-color: rgba(255, 215, 0, 1);
+    --my-wbSunny-left: 17%;
+    --my-wbSunny-top: 1%;
+    --my-wbSunny-z: 1;
+    --dark-wbSunny-size: 20px;
+    --dark-wbSunny-color: rgba(255, 215, 0, 0);
+    --dark-wbSunny-left: 90%;
+    --dark-wbSunny-top: 75%;
+    --dark-wbSunny-z: 1;
+
+    --light-cloud-size: 25px;
+    --light-cloud-color: rgba(100, 100, 100, 1);
+    --light-cloud-left: 60%;
+    --light-cloud-top: -5%;
+    --light-cloud-z: 1;
+    --my-cloud-size: 32px;
+    --my-cloud-color: rgba(100, 100, 100, 0.8);
+    --my-cloud-left: 55%;
+    --my-cloud-top: 15%;
+    --my-cloud-z: 3;
+    --dark-cloud-size: 30px;
+    --dark-cloud-color: rgba(200, 200, 200, 0.8);
+    --dark-cloud-left: 55%;
+    --dark-cloud-top: -5%;
+    --dark-cloud-z: 1;
+    
+    --light-filterDrama-size: 25px;
+    --light-filterDrama-color: rgba(120, 120, 120, 0.4);
+    --light-filterDrama-left: 10%;
+    --light-filterDrama-top: 30%;
+    --light-filterDrama-z: 2;
+    --my-filterDrama-size: 28px;
+    --my-filterDrama-color: rgba(20, 20, 20, 0.8);
+    --my-filterDrama-left: 10%;
+    --my-filterDrama-top: 30%;
+    --my-filterDrama-z: 2;
+    --dark-filterDrama-size: 30px;
+    --dark-filterDrama-color: rgba(150, 150, 150, 1);
+    --dark-filterDrama-left: 10%;
+    --dark-filterDrama-top: 15%;
+    --dark-filterDrama-z: 0;
+
+    --light-darkMode-size: 25px;
+    --light-darkMode-color: rgba(255, 255, 250, 0);
+    --light-darkMode-left: -100%;
+    --light-darkMode-top: -0%;
+    --light-darkMode-z: 3;
+    --my-darkMode-size: 25px;
+    --my-darkMode-color: rgba(255, 255, 250, 0);
+    --my-darkMode-left: -100%;
+    --my-darkMode-top: -0;
+    --my-darkMode-z: 3;
+    --dark-darkMode-size: 30px;
+    --dark-darkMode-color: rgba(255, 255, 250, 1);
+    --dark-darkMode-left: 30%;
+    --dark-darkMode-top: 5%;
+    --dark-darkMode-z: 3;
+}
+
+.wbSunny {
+    position: absolute;
+    font-size: var(--dark-wbSunny-size);
+    color: var(--dark-wbSunny-color);
+    left: var(--dark-wbSunny-left);
+    top: var(--dark-wbSunny-top);
+    z-index: var(--dark-wbSunny-z);
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.cloud {
+    position: absolute;
+    font-size: var(--dark-cloud-size);
+    color: var(--dark-cloud-color);
+    left: var(--dark-cloud-left);
+    top: var(--dark-cloud-top);
+    z-index: var(--dark-cloud-z);
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.filterDrama {
+    position: absolute;
+    font-size: var(--dark-filterDrama-size);
+    color: var(--dark-filterDrama-color);
+    left: var(--dark-filterDrama-left);
+    top: var(--dark-filterDrama-top);
+    z-index: var(--dark-filterDrama-z);
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.darkMode {
+    position: absolute;
+    transform: rotate(145deg);
+    font-size: var(--dark-darkMode-size);
+    color: var(--dark-darkMode-color);
+    left: var(--dark-darkMode-left);
+    top: var(--dark-darkMode-top);
+    z-index: var(--dark-darkMode-z);
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes darkToLightWbSunny {
+    from {
+        font-size: var(--dark-wbSunny-size);
+        color: var(--dark-wbSunny-color);
+        left: var(--dark-wbSunny-left);
+        top: var(--dark-wbSunny-top);
+        z-index: var(--dark-wbSunny-z);
+    } 
+    to {
+        font-size: var(--light-wbSunny-size);
+        color: var(--light-wbSunny-color);
+        left: var(--light-wbSunny-left);
+        top: var(--light-wbSunny-top);
+        z-index: var(--light-wbSunny-z);
+    }
+}
+
+@keyframes lightToMyownWbSunny {
+    from {
+        font-size: var(--light-wbSunny-size);
+        color: var(--light-wbSunny-color);
+        left: var(--light-wbSunny-left);
+        top: var(--light-wbSunny-top);
+        z-index: var(--light-wbSunny-z);
+    } 
+    to {
+        font-size: var(--my-wbSunny-size);
+        color: var(--my-wbSunny-color);
+        left: var(--my-wbSunny-left);
+        top: var(--my-wbSunny-top);
+        z-index: var(--my-wbSunny-z);
+    }
+}
+
+@keyframes myOwnToDarkWbSunny {
+    from {
+        font-size: var(--my-wbSunny-size);
+        color: var(--my-wbSunny-color);
+        left: var(--my-wbSunny-left);
+        top: var(--my-wbSunny-top);
+        z-index: var(--my-wbSunny-z);
+    } 
+    to {
+        font-size: var(--dark-wbSunny-size);
+        color: var(--dark-wbSunny-color);
+        left: var(--dark-wbSunny-left);
+        top: var(--dark-wbSunny-top);
+        z-index: var(--dark-wbSunny-z);
+    }
+}
+
+@keyframes darkToLightCloud {
+    from {
+        font-size: var(--dark-cloud-size);
+        color: var(--dark-cloud-color);
+        left: var(--dark-cloud-left);
+        top: var(--dark-cloud-top);
+        z-index: var(--dark-cloud-z);
+    } 
+    to {
+        font-size: var(--light-cloud-size);
+        color: var(--light-cloud-color);
+        left: var(--light-cloud-left);
+        top: var(--light-cloud-top);
+        z-index: var(--light-cloud-z);
+    }
+}
+
+@keyframes lightToMyownCloud {
+    from {
+        font-size: var(--light-cloud-size);
+        color: var(--light-cloud-color);
+        left: var(--light-cloud-left);
+        top: var(--light-cloud-top);
+        z-index: var(--light-cloud-z);
+    } 
+    to {
+        font-size: var(--my-cloud-size);
+        color: var(--my-cloud-color);
+        left: var(--my-cloud-left);
+        top: var(--my-cloud-top);
+        z-index: var(--my-cloud-z);
+    }
+}
+
+@keyframes myOwnToDarkCloud {
+    from {
+        font-size: var(--my-cloud-size);
+        color: var(--my-cloud-color);
+        left: var(--my-cloud-left);
+        top: var(--my-cloud-top);
+        z-index: var(--my-cloud-z);
+    } 
+    to {
+        font-size: var(--dark-cloud-size);
+        color: var(--dark-cloud-color);
+        left: var(--dark-cloud-left);
+        top: var(--dark-cloud-top);
+        z-index: var(--dark-cloud-z);
+    }
+}
+
+@keyframes darkToLightFilterDrama {
+    from {
+        font-size: var(--dark-filterDrama-size);
+        color: var(--dark-filterDrama-color);
+        left: var(--dark-filterDrama-left);
+        top: var(--dark-filterDrama-top);
+        z-index: var(--dark-filterDrama-z);
+    } 
+    to {
+        font-size: var(--light-filterDrama-size);
+        color: var(--light-filterDrama-color);
+        left: var(--light-filterDrama-left);
+        top: var(--light-filterDrama-top);
+        z-index: var(--light-filterDrama-z);
+    }
+}
+
+@keyframes lightToMyownFilterDrama {
+    from {
+        font-size: var(--light-filterDrama-size);
+        color: var(--light-filterDrama-color);
+        left: var(--light-filterDrama-left);
+        top: var(--light-filterDrama-top);
+        z-index: var(--light-filterDrama-z);
+    } 
+    to {
+        font-size: var(--my-filterDrama-size);
+        color: var(--my-filterDrama-color);
+        left: var(--my-filterDrama-left);
+        top: var(--my-filterDrama-top);
+        z-index: var(--my-filterDrama-z);
+    }
+}
+
+@keyframes myOwnToDarkFilterDrama {
+    from {
+        font-size: var(--my-filterDrama-size);
+        color: var(--my-filterDrama-color);
+        left: var(--my-filterDrama-left);
+        top: var(--my-filterDrama-top);
+        z-index: var(--my-filterDrama-z);
+    } 
+    to {
+        font-size: var(--dark-filterDrama-size);
+        color: var(--dark-filterDrama-color);
+        left: var(--dark-filterDrama-left);
+        top: var(--dark-filterDrama-top);
+        z-index: var(--dark-filterDrama-z);
+    }
+}
+
+@keyframes darkToLightDarkMode {
+    from {
+        font-size: var(--dark-darkMode-size);
+        color: var(--dark-darkMode-color);
+        left: var(--dark-darkMode-left);
+        top: var(--dark-darkMode-top);
+        z-index: var(--dark-darkMode-z);
+    } 
+    to {
+        font-size: var(--light-darkMode-size);
+        color: var(--light-darkMode-color);
+        left: var(--light-darkMode-left);
+        top: var(--light-darkMode-top);
+        z-index: var(--light-darkMode-z);
+    }
+}
+
+@keyframes lightToMyownDarkMode {
+    from {
+        font-size: var(--light-darkMode-size);
+        color: var(--light-darkMode-color);
+        left: var(--light-darkMode-left);
+        top: var(--light-darkMode-top);
+        z-index: var(--light-darkMode-z);
+    } 
+    to {
+        font-size: var(--my-darkMode-size);
+        color: var(--my-darkMode-color);
+        left: var(--my-darkMode-left);
+        top: var(--my-darkMode-top);
+        z-index: var(--my-darkMode-z);
+    }
+}
+
+@keyframes myOwnToDarkDarkMode {
+    from {
+        font-size: var(--my-darkMode-size);
+        color: var(--my-darkMode-color);
+        left: var(--my-darkMode-left);
+        top: var(--my-darkMode-top);
+        z-index: var(--my-darkMode-z);
+    } 
+    to {
+        font-size: var(--dark-darkMode-size);
+        color: var(--dark-darkMode-color);
+        left: var(--dark-darkMode-left);
+        top: var(--dark-darkMode-top);
+        z-index: var(--dark-darkMode-z);
+    }
+}
+
+.wbSunnyDarkToLight {
+    animation-name: darkToLightWbSunny;
+}
+
+.wbSunnyLightToMyOwn {
+    animation-name: lightToMyownWbSunny;
+}
+
+.wbSunnyMyOwnToDark {
+    animation-name: myOwnToDarkWbSunny;
+}
+
+.cloudDarkToLight {
+    animation-name: darkToLightCloud;
+}
+.cloudLightToMyOwn {
+    animation-name: lightToMyownCloud;
+}
+.cloudMyOwnToDark {
+    animation-name: myOwnToDarkCloud;
+}
+.filterDramaDarkToLight {
+    animation-name: darkToLightFilterDrama;
+}
+.filterDramaLightToMyOwn {
+    animation-name: lightToMyownFilterDrama;
+}
+.filterDramaMyOwnToDark {
+    animation-name: myOwnToDarkFilterDrama;
+}
+.darkModeDarkToLight {
+    animation-name: darkToLightDarkMode;
+}
+.darkModeLightToMyOwn {
+    animation-name: lightToMyownDarkMode;
+}
+.darkModeMyOwnToDark {
+    animation-name: myOwnToDarkDarkMode;
+}

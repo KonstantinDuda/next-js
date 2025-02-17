@@ -1,5 +1,5 @@
 [data-theme='light'] {
-    --background: rgba(220, 220, 220, 1);;
+    --background: rgba(240, 240, 240, 1);;
     --foreground: black;
     --backgrPre: rgba(200, 200, 200, 1);
 }
@@ -8,6 +8,12 @@
     --background: black;
     --foreground: rgba(220, 220, 220, 1);
     --backgrPre: rgba(50, 50, 50, 1);
+}
+
+[data-theme='myown'] {
+    --background: rgba(220, 220, 220, 1);
+    --foreground: rgba(0, 0, 0, 1);
+    --backgrPre: rgba(145, 170, 215, 0.2);
 }
 
 body {

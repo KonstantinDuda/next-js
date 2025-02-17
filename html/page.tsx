@@ -1,3 +1,4 @@
+import React from "react";
 import StartToAtributes from "./start-atributes";
 import HtmlWithCSS from "./html-css";
 import Citates from "./citates";
