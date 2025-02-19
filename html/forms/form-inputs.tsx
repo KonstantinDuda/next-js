@@ -16,7 +16,7 @@ function MyInput({type, description} : MyInputProps) {
 export default function FormInputs() {
     return (
         <form className={style.inputTypes}>
-        <h3 className={style.iTHead}>input type`s:</h3>
+        <h3 id='inputHtmlForm' className={style.iTHead}>input type`s:</h3>
             <MyInput type="text" description="- поле вводу" />
             <MyInput type="password" description="- поле вводу що приховує данні що в нього 
                 вводять" />

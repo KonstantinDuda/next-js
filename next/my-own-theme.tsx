@@ -4,6 +4,7 @@ import React from "react";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import style from "@/app/ui/next/myown-theme-changer.module.css"
+import Link from "next/link";
 
 export default function MyOwnTheme() {
     const {theme, setTheme} = useTheme();
@@ -85,10 +86,15 @@ export default function MyOwnTheme() {
                 <i className={`${"material-icons"} ${darkModeState} ${style.darkMode}`}>
                     brightness_3</i>
             </div>
-            При цьому файл з анімаціями у мене вийшов довжиною в 382 строки! І я сподівався 
-            що результат буде гарніше... Зато отримав досвід роботи з useEffect і більше 
-            досвіду з useState. Далі планую продовжити вивчення CSS щоб дізнатись чи можливо 
-            використати змінні з одного CSS файла в іншому. 
+            При цьому <a href="https://github.com/KonstantinDuda/next-js/blob/0707939e2a00d37c9109080463e1a7484bf4ae5f/ui/next/myown-theme-changer.module.css"
+             target="_blank" rel="noreferrer">
+            файл з анімаціями</a> у мене вийшов довжиною в 382 строки! 
+            І я сподівався що результат буде гарніше... Зато отримав досвід роботи з 
+            useEffect і більше досвіду з useState як я їх використав можна <a 
+            href="https://github.com/KonstantinDuda/next-js/blob/0707939e2a00d37c9109080463e1a7484bf4ae5f/next/my-own-theme.tsx"
+             target="_blank" rel="noreferrer">
+            подивитись тут</a>. Далі планую продовжити <Link href="/css">вивчення CSS
+            </Link> щоб дізнатись чи можливо використати змінні з одного CSS файла в іншому. 
         </div>
     );
 }
