@@ -68,18 +68,23 @@ export default function Frames() {
             href="https://w3schoolsua.github.io/htmltryit/tryhtml_responsive_media_query.html"
             target="_blank" rel="noreferrer"> в прикладі</a> використовується float елемент 
             вирівнювання який мені не довподоби. Тож я використав display:grid. Код CSS:
-            <div className={
-                style.codeBlock}><b>.gridContainer</b> - display: grid; row-gap: 22px; grid-template
-                -columns: 20% 60% 20%; grid-template-rows: 2; background-color: rgba(155, 155, 
-                155, 0.5); <b>.headerDiv</b> - margin: auto; grid-column: 1 / 4; <b>.leftDiv
-                </b> - background-color: rgba(125, 125, 125, 0.5); margin-left: 10px; <b>
-                .mainDiv</b> - background-color: rgba(95, 95, 95, 0.5); margin-left: 10px; margin
-                -right: 10px; <b>.rightDiv</b> - background-color: rgba(125, 125, 125, 0.5);
-                margin-right: 10px; <b>@media screen and (max-width:800px)</b> - .headerDiv, 
-                .leftDiv, .mainDiv, .rightDiv - margin: 10px; <b>.gridContainer</b> - display: 
-                block; background-color: rgba(155, 155, 155, 0.5); <b>.codeBlock</b> - 
-                background-color: white;
-                </div>
+            <div className={style.codeBlock}><b>.gridContainer</b> <br /> 
+                &#8195; display: grid; &#8195;  row-gap: 22px; &#8195;  
+                grid-template-columns: 20% 60% 20%; &#8195;  grid-template-rows: 2; 
+                &#8195; background-color: rgba(155, 155, 155, 0.5); <br /> 
+                &#8195; <b>.headerDiv</b> - margin: auto; &#8195; grid-column: 1 / 4; <br />
+                &#8195; <b>.leftDiv</b> - background-color: rgba(125, 125, 125, 0.5); 
+                &#8195; margin-left: 10px; <br />
+                &#8195; <b>.mainDiv</b> - background-color: rgba(95, 95, 95, 0.5); 
+                &#8195; margin-left: 10px; &#8195; margin-right: 10px; <br /> 
+                &#8195; <b>.rightDiv</b> - background-color: rgba(125, 125, 125, 0.5);
+                &#8195; margin-right: 10px; <br /> 
+                &#8195; <b>@media screen and (max-width:800px)</b> - &#8195;  .headerDiv, 
+                .leftDiv, .mainDiv, .rightDiv - margin: 10px; <br />
+                &#8195; <b>.gridContainer</b> - display: block; 
+                &#8195; background-color: rgba(155, 155, 155, 0.5); <br /> 
+                &#8195; <b>.codeBlock</b> - background-color: white;
+            </div>
                 Тут мені знову допоміг ШІ. Цього разу Gemini підсказав, чому у мене пропадав 
                 фон у gridContainer, коли я ставив значення на inline.
         </div>

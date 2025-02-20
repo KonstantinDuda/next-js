@@ -37,6 +37,15 @@ pre {
     border-radius: 10;
 }
 
+.myCode {
+    font-size: 18px;
+    padding: 5px;
+    margin: 5px;
+    padding-left: 25px;
+    background-color: var(--backgrPre);
+    border-radius: 10;
+}
+
 b {
     font-size: 18px;
     font-weight: bold;

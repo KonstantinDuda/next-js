@@ -42,26 +42,26 @@
 }
 
 @keyframes one {
-    from {width: 50px;}
-    to {width: 200px;}
+    from {width: 10%;}
+    to {width: 80%;}
 }
 
 @keyframes two {
-    10% {width: 50px;}
-    50% {width: 200px;}
-    100% {width: 50px;}
+    10% {width: 10%;}
+    50% {width: 110%;}
+    100% {width: 10%;}
 }
 
 @keyframes three {
-    from {width: 50px;}
-    to {width: 200px;}
+    from {width: 10%;}
+    to {width: 100%;}
 }
 
 @keyframes four {
-    10% {width: 50px;}
-    33% {width: 120px;}
-    66% {width: 300px;}
-    100% {width: 100px;}
+    10% {width: 10%;}
+    33% {width: 20%;}
+    66% {width: 120%;}
+    100% {width: 100%;}
 }
 
 .animOne {

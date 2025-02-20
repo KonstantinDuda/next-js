@@ -5,7 +5,7 @@ import MyTable from './table';
 export default function Pictures() {
     return (
         <>
-            <h1>Зображення - </h1>
+            <h1 id="HtmlPictures">Зображення - </h1>
             <p><img src="/profile.jpg" alt="profile" width="100" height="100" 
             style={{ float: 'right'}} />
                 23.01.2025. <b>img</b> - тег для відображення зображень. Він не має 

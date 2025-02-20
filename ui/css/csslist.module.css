@@ -1,0 +1,38 @@
+.firstBox {
+    display: flex;
+    flex-direction: column;
+}
+.firBlist {
+    order: 1;
+}
+.myTransition {
+    order: 2;
+}
+
+.secondBox {
+    display: flex;
+    flex-direction: column;
+}
+.secBlist {
+    order: 1;
+}
+.myFlexbox {
+    order: 2;
+}
+
+@media screen and (min-width:992px) {
+    .firstBox, .secondBox {
+        flex-direction: row;
+    }
+
+    .myTransition, .myFlexbox {
+        width: 60%;
+        order: 1;
+        margin-right: 20px;
+    }
+    .firBlist, .secBlist {
+        width: 40%;
+        margin: 5px;
+        order: 2;
+    }
+}

@@ -1,17 +1,19 @@
 import React from "react";
 import Link from "next/link";
 import MyTransition from "./transition";
+import style from "@/app/ui/css/csslist.module.css";
+import AdaptiveGrid from "./adaptive-grid";
 
 export default function MyCSS() {
     return (
         <>
             <h1><Link href="./css">CSS draft</Link></h1>
             Приклад CSS коду для того щоб визначити назви: <br />
-            <pre>
-            p &#123;&#8201;     - це селектор <br />
-            &#8201; color: red; &#8201;     - це властивість і значення властивості<br />
+            <div className="myCode">
+            p &#123;&#8195;     - це селектор <br />
+            &#8195; color: red; &#8195;     - це властивість і значення властивості<br />
             &#125;
-            </pre>
+            </div>
             <p>
                 В даному прикладі написаний селектор елементу. Тобто кожен параграф у 
                 компоненті до якого примінили CSS файл з таким селектором буде червоний. 
@@ -28,15 +30,17 @@ export default function MyCSS() {
                 імпортується у файлі де він буде використаний. Тоді я зможу присвоїти ім&#39;я 
                 класу через модуль і використати це ім&#39;я в модулі, для стилізації. В HTML 
                 виглядає це приблизно так: 
-                <pre>
+                <div className="myCode">
                 import style from &#39;module place&#39;; <br />
                 <br />
                 p className=&#123;style.myP&#125;
-                </pre>  
+                </div>  
             </div>
             Трохи інформації яка поки що мені не цікава, хоча я всеж все це прочитаю. Просто не 
             буду нічого записувати: 
-            <ul>
+        <ul>
+        <div className={style.firstBox}>
+            <div className={style.firBlist}>
                 <li><a href="https://w3schoolsua.github.io/css/css_comments.html#gsc.tab=0">
                     Коментарі</a></li>
                 <li><a href="https://w3schoolsua.github.io/css/css_colors.html#gsc.tab=0">
@@ -148,11 +152,6 @@ export default function MyCSS() {
                     2D трансформації</a></li>
                 <li><a href="https://w3schoolsua.github.io/css/css3_3dtransforms.html#gsc.tab=0">
                     3D трансформації</a></li>
-                </ul>
-
-                <MyTransition />
-                
-                <ul>
                 <li><a href="https://w3schoolsua.github.io/css/css_tooltip.html#gsc.tab=0">
                     Підказки</a></li>
                 <li><a href="https://w3schoolsua.github.io/css/css3_images.html#gsc.tab=0">
@@ -173,6 +172,14 @@ export default function MyCSS() {
                     Кілька стовбців</a></li>
                 <li><a href="https://w3schoolsua.github.io/css/css3_user_interface.html#gsc.tab=0">
                     Користувацький інтерфейс</a></li>
+            </div>
+                <div className={style.myTransition}>
+                    <MyTransition />
+                </div>
+        </div>
+
+        <div className={style.secondBox}>
+            <div className={style.secBlist}>
                 <li><a href="https://w3schoolsua.github.io/css/css3_variables.html#gsc.tab=0">
                     Змінні</a></li>
                     <div>
@@ -196,10 +203,13 @@ export default function MyCSS() {
                         змініть розмір веб переглядача після переходу по посиланню. Як я його 
                         реалізовував можна <a 
                         href="https://github.com/KonstantinDuda/next-js/blob/0707939e2a00d37c9109080463e1a7484bf4ae5f/ui/html/forms/forms.module.css"
-                        target="_blank" rel="noreferrer">подивитись на github</a>
+                        target="_blank" rel="noreferrer">подивитись на github</a>. З цікавого 
+                        тут є певні &#34;типові брекпоінти&#34; в <b>992 та 600px</b>.
                     </div>
-                <li><a href="https://w3schoolsua.github.io/css/css3_flexbox.html#gsc.tab=0">
-                    Flexbox</a></li>
+            </div>
+                <div className={style.myFlexbox}>
+                    <li><a href="https://w3schoolsua.github.io/css/css3_flexbox.html#gsc.tab=0">
+                        Flexbox</a></li>
                     <div>
                         <b>Батьківський контейнер і його властивості:</b> <br />
                         &#8195; Щоб зробити контейнер типу флекс бокса, треба встановити для селектора 
@@ -228,7 +238,7 @@ export default function MyCSS() {
                         <br />
                         <b>Вкладені елементи і їх властивості:</b> <br />
                         &#8195; За допомогою <ins>order</ins> властивості можна змінювати послідовність  
-                        вкладень просто встановлюючи для нього значення від 1 і далі. <br />
+                        вкладень просто встановлюючи для нього значення від 1 і далі.<br />
                         &#8195; <ins>flex-grow</ins> - розтягує зміст одного відносно іншого, залежить від 
                         значеня в цифрах (наприклад 1 до 3 і т.п.), за замовчуваням 0. <br />
                         &#8195; <ins>flex-shrink</ins> - стискає елемент, за замовченям 1 <br />
@@ -237,7 +247,13 @@ export default function MyCSS() {
                         в такій послідовності. <br />
                         &#8195; І ще щось робить <ins>align-self</ins> <br />
                     </div>
-            </ul>
+                </div>
+            </div> 
+        </ul>
+
+            <AdaptiveGrid />
+            Посилання де можна подивитись решту налаштувань <a href="">CSS файлу</a>. 
+
             <h3><Link href=".">Повернутись на головну сторінку</Link></h3>
         </>
     );

@@ -88,8 +88,8 @@ export default function MyTransition() {
                         </ul>
                         @keyframes one:
                         <ul>
-                            <li>from &#123;width: 50px;&#125;</li>
-                            <li>to &#123;width: 200px;&#125;</li>
+                            <li>from &#123;width: 10%;&#125;</li>
+                            <li>to &#123;width: 80%;&#125;</li>
                         </ul>
                     </div>
                     <div className={style.animOne}></div>
@@ -104,9 +104,9 @@ export default function MyTransition() {
                         </ul>
                         @keyframes two:
                         <ul>
-                            <li>10% &#123;width: 50px;&#125;</li>
-                            <li>50% &#123;width: 200px;&#125;</li>
-                            <li>100% &#123;width: 50px;&#125;</li>
+                            <li>10% &#123;width: 10%;&#125;</li>
+                            <li>50% &#123;width: 110%;&#125;</li>
+                            <li>100% &#123;width: 10%;&#125;</li>
                         </ul>
                     </div>
                     <div className={style.animTwo}></div>
@@ -121,8 +121,8 @@ export default function MyTransition() {
                         </ul>
                         @keyframes three:
                         <ul>
-                            <li>from &#123;width: 50px;&#125;</li>
-                            <li>to &#123;width: 200px;&#125;</li>
+                            <li>from &#123;width: 10%;&#125;</li>
+                            <li>to &#123;width: 100%;&#125;</li>
                         </ul>
                     </div>
                     <div className={style.animThree}></div>
@@ -136,10 +136,10 @@ export default function MyTransition() {
                         </ul>
                         @keyframes four:
                         <ul>
-                            <li>10% &#123;width: 50px;&#125;</li>
-                            <li>33% &#123;width: 120px;&#125;</li>
-                            <li>66% &#123;width: 300px;&#125;</li>
-                            <li>100% &#123;width: 100px;&#125;</li>
+                            <li>10% &#123;width: 10%;&#125;</li>
+                            <li>33% &#123;width: 20%;&#125;</li>
+                            <li>66% &#123;width: 120%;&#125;</li>
+                            <li>100% &#123;width: 100%;&#125;</li>
                         </ul>
                     </div>
                     <div className={style.animFour}></div>
