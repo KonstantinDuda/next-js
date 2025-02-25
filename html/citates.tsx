@@ -5,7 +5,7 @@ export default function Citates() {
     return (
         <>
         <div>
-            <h1>Цитати - </h1>
+            <h1 id="htmlCite">Цитати - </h1>
             22.01.2025. q - <q>короткі цитати</q> (Огортає цитату лапками). blockquote - 
             <blockquote cite="https://w3schoolsua.github.io/html/html_quotation_elements.html#gsc.tab=0">
             визначає розділ що цитується з іншого джерела.</blockquote> Джерело вказується

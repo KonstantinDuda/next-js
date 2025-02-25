@@ -4,7 +4,7 @@ import React from 'react';
 export default function HtmlWithCSS() {
     return (
         <div>
-            <h1 className={styles.myTitle}>Html with CSS</h1>
+            <h1 className={styles.myTitle} id="htmlHtmlCss">Html with CSS</h1>
             21.01.2025 h1...h6 заголовки мають атрибут style, font-size:Npx (де N це розмір 
             в пікселях на що вказує &#34;px&#34;) властивість яку часто використовують. Але схоже що 
             в Next.js (або саме в цьому проекті...) я не можу використовувати підхід описаний 

@@ -7,9 +7,9 @@ export default function Page() {
 
     return (
         <>
-        <h1>Форми</h1>
+        <h1 id="htmlForms">Форми</h1>
         <h4>
-            Загалом про форми треба вчити саме в <Link href="./react">реакт</Link>. 
+            Загалом про форми треба вчити саме в <Link href="../react">реакт</Link>. 
             Тож тут я опишу леше загальні данні.
         </h4>
         <b>form</b> - форми використовують для збору данних від користувача. <b>input</b> - 
@@ -43,23 +43,23 @@ export default function Page() {
             </form>
             </div>
             <div className={style.formDescription}>
-                <pre>
+                <div className="myCode">
                 &#60;form&#62;<br /> 
-                    &#8201; &#60;input type=&#39;radio&#39; name=&#39;number&#39; value=&#39;one&#39; 
+                    &#8195; &#60;input type=&#39;radio&#39; name=&#39;number&#39; value=&#39;one&#39; 
                     defaultChecked=&#123;true&#125; /&#62; One &#60;br /&#62;<br />
-                    &#8201; &#60;input type=&#39;radio&#39; name=&#39;number&#39; value=&#39;two&#39; /&#62; 
+                    &#8195; &#60;input type=&#39;radio&#39; name=&#39;number&#39; value=&#39;two&#39; /&#62; 
                     Two &#60;br /&#62;<br />
-                    &#8201; &#60;input type=&#39;radio&#39; name=&#39;number&#39; value=&#39;three&#39; /&#62; 
+                    &#8195; &#60;input type=&#39;radio&#39; name=&#39;number&#39; value=&#39;three&#39; /&#62; 
                     Three <br />
                 &#60;/form&#62;
-                </pre>
+                </div>
             </div>
         </div>
         Кнопка для відправки може бути просто <b>button</b> з <ins>type</ins>=<i>submit</i>.
         <p><b>fieldset</b> - використовується для групування данних у формі. <b>legend</b> - 
         заголовок для fieldset.</p>
 
-        <h3>Атрибути form: </h3>
+        <h3 id="htmlFormAtributes">Атрибути form: </h3>
         <ins>action</ins> - дія що має бути виконана при надсиланні форми. В прикладі вказана 
         адреса. Якщо не прописати то вказується поточна сторінка. <br />
         <ins>target</ins> - визначає де буде відкриватись результат чи якось так. За 
@@ -81,7 +81,7 @@ export default function Page() {
         <ins>rel</ins> - визначає зв&#39;язок між пов&#39;язаним ресурсом і поточним 
         документом (уявлення не маю про що це).<br />
 
-        <h3>Елементи form:</h3>
+        <h3 id="htmlFormElements">Елементи form:</h3>
         <b>input</b> - найважливіший елемент форми. Про нього нижче.<br />
         <b>select</b> - випадаючий список, має атрибут <ins>name</ins>, <ins>size</ins> - 
             кількість видимих елементів, <ins>multiple</ins> - дозволяє обрати кілька 
@@ -97,7 +97,7 @@ export default function Page() {
             </ins> - не зовсім розібрався як це працює та в прикладі for=&#34;a b&#34;, 
             де a b це ідентифікатори інпутів, як я зрозумів...<br />
 
-        <h3>Атрибути input: </h3>
+        <h3 id="htmlInputAtributes">Атрибути input: </h3>
         input - свого роду map що має ключ і значення. Значення це те що вводить користувач, 
         а ключ це <ins>name</ins>, якщо користуватись такою логікою. <br />
         <ins>name</ins> - кожне поле вводу повинно мати атрибут name. <br />

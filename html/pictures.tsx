@@ -5,7 +5,7 @@ import MyTable from './table';
 export default function Pictures() {
     return (
         <>
-            <h1 id="HtmlPictures">Зображення - </h1>
+            <h1 id="htmlPictures">Зображення - </h1>
             <p><img src="/profile.jpg" alt="profile" width="100" height="100" 
             style={{ float: 'right'}} />
                 23.01.2025. <b>img</b> - тег для відображення зображень. Він не має 
@@ -63,7 +63,7 @@ export default function Pictures() {
             head за допомогою тегу <b>link</b> і властивостей <ins>rel</ins>=
             &#34;<i>icon</i>&#34; <ins>type</ins>=&#34;<i>image/png</i>&#34; <ins>href</ins>=
             &#34;<i>favicon.png</i>&#34;. <b>title</b> - назва сторінки, вказується в head. <br />
-            <h2>Таблиці</h2>
+            <h2 id="htmlTables">Таблиці</h2>
             <b>table</b> - таблиця. <b>tr</b> - рядок таблиці. <b>th</b> - заголовок 
             таблиці (жирний шрифт і відцентрований текст). <b>td</b> - чарунка. При 
             використанні цих данних виникає помилка: &#34;In HTML, tr cannot be a child of table. 

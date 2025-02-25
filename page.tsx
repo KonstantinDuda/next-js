@@ -6,15 +6,17 @@ import MyNext from './next/page';
 import MyTypeScripte from './type-script/page';
 import MyCSS from './css/page';
 
+// <div className={style.menu}><Menu className={style.menu}>Menu</Menu></div>
+
 export default function Page() {
   return (
     <main>
-      <MyNext />
-      <MyTypeScripte />
-      <MyReact />
-      <MyCSS />
-      <MyHtml />
-      <FirstPosts />
+        <MyNext />
+        <MyTypeScripte />
+        <MyReact />
+        <MyCSS />
+        <MyHtml />
+        <FirstPosts />
     </main>
   );
 }

@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function MyTransition() {
     return (
         <>
-            <h2>Переходи</h2>
+            <h2 id="cssTransition">Переходи</h2>
             За переходи відповідають наприклад такі властивості як <ins>transition
             </ins>, <ins>transition-property</ins>, <ins>transition-duration</ins>, <ins>
             transition-timing-function</ins>. Що по суті 
@@ -21,7 +21,7 @@ export default function MyTransition() {
             </i> або <i>ease-in-out</i>. <ins>transition-delay</ins> - визначає затримку 
             перед початком анімації в секундах.
 
-            <h2>Анімації</h2>
+            <h2 id="cssAnimation">Анімації</h2>
             Також CSS дозволяє робити анімації без TypeScripte за допомогою <ins>animation
             </ins> властивостей та <b>@keyframes назваАнімації</b> - селектора, в який 
             записуються <b>from</b> і <b>to</b> селектори з початковим і кінцевим значеннями 

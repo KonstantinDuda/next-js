@@ -4,16 +4,16 @@ import React from "react";
 export default function Frames() {
     return (
         <>
-        <h1>Фрейми</h1>
+        <h1 id="htmlFrames">Фрейми</h1>
         28.01.2025 Фрейми використовують щов відображати вебсторінку на вебсторінці. <b>
         iframe</b> - фрейм. <ins>src</ins> - адреса url. <ins>title</ins> - опис. Також можна 
         визначити розмір фрейма. Стилізуванням можна вимкнути межу <i>border: none</i>. <ins>
         name</ins> - ім&#39;я фрейма на яке можна посилатись за допомогою <ins>target</ins> тега а.
-        <h2>JavaScript</h2>
+        <h2 id="htmlJavaScript">JavaScript</h2>
         <b>script</b> - скрипт. <ins>src</ins> - вказує на зовнішній файл скрипту. Метод що 
         часто використовують: <i>document.getElementById</i> - звернення до елемента по 
         ідентифікатору. Не буду тут сильно заглиблюватись в це. Про це пізніше.
-        <h2>Head</h2>
+        <h2 id="htmlHead">Head</h2>
         <b>head</b> - контейнер для метаданних. На скільки я зрозумів він знаходиться в 
         layout. Може містити в собі <b>title</b>, <b>meta</b> - <blockquote cite="
         https://w3schoolsua.github.io/html/html_head.html#gsc.tab=0">Метадані не будуть 
@@ -31,7 +31,7 @@ export default function Frames() {
         що meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34; 
         необхідно вказувати на всіх вебсторінках... <b>base</b> - визначає базову URL-адресу. 
         Атрибути: <ins>href</ins>, <ins>target</ins> (<i>_blank</i>).
-        <h2>Макети</h2>
+        <h2 id="htmlMakets">Макети</h2>
         Елементи для створення макету сайту: <b>header</b> - заголовок документа або розділу, 
         <b>nav</b> - контейнер для посилань навігації, <b>section</b> - розділ, <b>article
         </b> - незалежна, автономна стаття, <b>aside</b> - контент окремий від основного  (
@@ -40,7 +40,7 @@ export default function Frames() {
         CSS. Поділяють на float, flexbox, framework (як bootstrap) та grid. Детальніше у 
         підручнику по CSS. Та враховуючи що я вже вподобав flex та grid я схиляюсь до 
         використання їх.
-        <h2>Адаптивний веб-дизайн</h2>
+        <h2 id="htmlAdaptive">Адаптивний веб-дизайн</h2>
         Вже згадана раніше meta з налаштуваннями name=&#34;viewport&#34; content=&#34;
         width=device-width, initial-scale=1.0&#34; для адаптивних сторінок описана як 
         необхідність. Я би волів керувати співвідношенням між шириною і висотою екрану, і в 
@@ -55,11 +55,11 @@ export default function Frames() {
         <b>Медіазапити</b> - те що я хотів дізнатись, в залежності від розміру оп елементи 
         відображаються горизонтально або вертикально: виконується за допомогою @media screen 
         and (max-width:...). Спробую створити якийсь приклад: 
-        <div className={style.gridContainer}>
-        <div className={style.headerDiv}>В цьому прикладі у мене є headerDiv з margin: avto, 
-            padding: 5px та grid-column: 1 / 4
+        <div className={`${style.gridContainer} backOne`}>
+        <div className={`${style.headerDiv}`}>В цьому прикладі у мене є headerDiv з 
+            margin: avto, padding: 5px та grid-column: 1 / 4
         </div>
-        <div className={style.leftDiv}>Перший div що розміщається зліва, або зверху. В 
+        <div className={`${style.leftDiv} backTwo`}>Перший div що розміщається зліва, або зверху. В 
             залежності від розміру екрану
         </div>
         <div className={style.mainDiv}>Другий div що має бути посередині і зберігає в собі 
@@ -68,7 +68,7 @@ export default function Frames() {
             href="https://w3schoolsua.github.io/htmltryit/tryhtml_responsive_media_query.html"
             target="_blank" rel="noreferrer"> в прикладі</a> використовується float елемент 
             вирівнювання який мені не довподоби. Тож я використав display:grid. Код CSS:
-            <div className={style.codeBlock}><b>.gridContainer</b> <br /> 
+            <div className={`${style.codeBlock} backThree`}><b>.gridContainer</b> <br /> 
                 &#8195; display: grid; &#8195;  row-gap: 22px; &#8195;  
                 grid-template-columns: 20% 60% 20%; &#8195;  grid-template-rows: 2; 
                 &#8195; background-color: rgba(155, 155, 155, 0.5); <br /> 
@@ -88,7 +88,7 @@ export default function Frames() {
                 Тут мені знову допоміг ШІ. Цього разу Gemini підсказав, чому у мене пропадав 
                 фон у gridContainer, коли я ставив значення на inline.
         </div>
-        <div className={style.rightDiv}>І третій div.</div>
+        <div className={`${style.rightDiv} backTwo`}>І третій div.</div>
         </div>
         </>
     );

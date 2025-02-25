@@ -61,7 +61,7 @@ export default function MyOwnTheme() {
 
     return (
         <div>
-            <h2>Створення власної теми</h2>
+            <h2 id="nextMyOwnTheme">Створення власної теми</h2>
             Для створення власної теми додав у layout.tsx до <b>ThemeProvider
             </b> атрибут <ins>themes</ins>=&#123;[<i>&#34;light&#34;, &#34;dark&#34;, 
             &#34;myown&#34;</i>]&#125;, зі списком тем. Важливо вписати темну і світлу 

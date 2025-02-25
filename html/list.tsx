@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function MyList() {
     return (
     <>
-        <h1 id="LIST">Списки</h1>
+        <h1 id="htmlLists">Списки</h1>
         Про списки вже було, сподіваюсь тут роскриється щось важливе чи хоч цікаве. 
         <b>ul</b> - ненумерований список. <b>ol</b> - впорядкований список. <b>li</b> - 
         елемент. <ins>list-style-type</ins> - властивість CSS для стилізації ul списка (
@@ -30,7 +30,7 @@ export default function MyList() {
         тексту, для цього є <b className={style.mySpan}>span</b>.</span> А в данному випадку я 
         ще і окремо стилізував саме слово span завдяки тому що style, class та id є загальними 
         атрибутами, тож я використав класс для тегу b.
-        <h3>div</h3>
+        <h3 id="htmlDiv">div</h3>
         Вирівняти елементи div по горизонталі можна за допомогою CSS. Є кілька варіантів:<br />
         <div className={style.myFlex}>
             <div className={style.myDiv}>
@@ -59,7 +59,7 @@ export default function MyList() {
                 оточити один div іншим div&#39;ом. А ще треба вказати ширину кожного стовпця в <i>
                 grid-template-columns:</i> у відсотках.</div>
         </div>
-        <h2>id</h2>
+        <h2 id="htmlId">id</h2>
         Закладки створюються за допомогою id. Спочатку закладка створюється за допомогою id=&#34;
         <Link href="/html#LIST">LIST</Link>&#34;, потім до посилання додається # з ім&#39;ям 
         ідентифікатора. Якщо посилання на закладку на іншій сторінці то спочатку назва 

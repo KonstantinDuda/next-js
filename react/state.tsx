@@ -10,10 +10,10 @@ export default function StateExample() {
 
     return (
         <>
-        <p>У React є useState і його використовують для роботи з інпутами. useState повертає 
+        <p id="reactUseState">У React є useState і його використовують для роботи з інпутами. useState повертає 
         змінну і її сетер. З цим хуком, як його називають <a href="
         https://uk.react.dev/reference/react/useState">можна познайомитись тут</a>. <br />
-        Суть в тому що від дозволяє додавати змінну стану до компонента. Щоб його використати 
+        Суть в тому що він дозволяє додавати змінну стану до компонента. Щоб його використати 
         треба імпортувати &#123; useState &#125; з react. Створюється змінна і сетер яким 
         присвоюється результат від useState. Виглядати це може так:
         </p>
@@ -49,30 +49,30 @@ export default function StateExample() {
         <br />
         Як в прикладі: const [name, setName] = useState&#60;string&#62;(&#34;&#34;); 
         оголосив перед return&#39;ом. На сторінці сама форма: <br />
-        <pre>
+        <div className="myCode">
             &#60;form&#62;<br />
-            &#8201; &#60;input type=&#34;text&#34; defaultValue=&#123;name&#125; 
+            &#8195; &#60;input type=&#34;text&#34; defaultValue=&#123;name&#125; 
                     onChange=&#123;(e) =&#62; <br />
-            &#8201;     setName(e.currentTarget.value)&#125; /&#62;<br />
-            &#8201; &#60;input type=&#34;button&#34; value=&#34;Send&#34; 
+            &#8195; &#8195; setName(e.currentTarget.value)&#125; /&#62;<br />
+            &#8195; &#60;input type=&#34;button&#34; value=&#34;Send&#34; 
                 onClick=&#123;async() =&#62; <br />
-            &#8201;     await reactAlert(name)&#125; /&#62;<br />
+            &#8195; &#8195; await reactAlert(name)&#125; /&#62;<br />
             &#60;/form&#62;
-        </pre>
+        </div>
         <br />
         Сама функція reactAlert в окремому файлі тож його треба імпортувати. І той 
         файл виглядає так:
-        <pre>
+        <div className="myCode">
         &#34;use client&#34;<br />
         <br />
         export default async function reactAlert(data: string) &#123;<br />
-        &#8201; if (data != &#34;&#34; && data != null) &#123;<br />
-        &#8201;     return alert(`&#39;You enter: &#39;$&#123;data&#125;&#39;`);<br />    
-        &#8201; &#125; else &#123;<br />
-        &#8201;     return alert(&#34;Please enter some data&#34;);<br />
-        &#8201; &#125;<br />
+        &#8195; if (data != &#34;&#34; && data != null) &#123;<br />
+        &#8195; &#8195; return alert(`&#39;You enter: &#39;$&#123;data&#125;&#39;`);<br />    
+        &#8195; &#125; else &#123;<br />
+        &#8195; &#8195; return alert(&#34;Please enter some data&#34;);<br />
+        &#8195; &#125;<br />
         &#125;<br />
-        </pre>
+        </div>
         Хоча я не впевнений я коректно використав перевірку data... Можливо в TypeScript 
         це має виглядати інакше! Та я його ще не вчив...
         

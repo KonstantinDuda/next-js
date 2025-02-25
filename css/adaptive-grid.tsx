@@ -5,7 +5,7 @@ import GridExamples from "./grid-examples";
 export default function AdaptiveGrid() {
     return (
         <>
-        <h2 id="AdaptiveCSS">Адаптивний дизайн</h2>
+        <h2 id="cssAdaptive">Адаптивний дизайн</h2>
             З підручника про <a 
             href="https://w3schoolsua.github.io/css/css_rwd_intro.html#gsc.tab=0"> адаптивний 
             веб дизайн</a> дізнався що бажано писати сайт для мобільних пристроїв, 
@@ -24,7 +24,7 @@ export default function AdaptiveGrid() {
             текст не поміщається 
             в одну ширину екрану і щоб його читати доводиться водити з ліва в право і назад, а 
             мені це дуже не подобається! Перезавантаження програми вирішило цю проблему!
-             Для зображень, окрім <Link href="/html#HtmlPictures">описаних
+             Для зображень, окрім <Link href="/html#htmlPictures">описаних
             в html</Link> методів, як наприклад picture в данному підручнику я нічого цікавого 
             не побачив. Там ще трохи інформації про відео, але прям зовсім трохи. Потім про 
             фреймворки. І шаблони. <br />

@@ -1,19 +1,31 @@
 [data-theme='light'] {
-    --background: rgba(240, 240, 240, 1);;
-    --foreground: black;
+    --background: rgba(220, 220, 220, 1);
+    --foreground: rgba(0, 0, 0, 1);
     --backgrPre: rgba(200, 200, 200, 1);
+    --gray-back-one: rgba(175, 175, 175, 0.9);
+    --gray-back-two: rgba(125, 125, 125, 1);
+    --gray-back-three: rgba(95, 95, 95, 1);
+    --gray-back-four: rgba(45, 45, 45, 1);
 }
 
 [data-theme='dark'] {
-    --background: black;
+    --background: rgba(0, 0, 0, 1);
     --foreground: rgba(220, 220, 220, 1);
     --backgrPre: rgba(50, 50, 50, 1);
+    --gray-back-one: rgba(45, 45, 45, 0.9);
+    --gray-back-two: rgba(95, 95, 95, 1);
+    --gray-back-three: rgba(125, 125, 125, 1);
+    --gray-back-four: rgba(175, 175, 175, 1);
 }
 
 [data-theme='myown'] {
     --background: rgba(220, 220, 220, 1);
     --foreground: rgba(0, 0, 0, 1);
     --backgrPre: rgba(145, 170, 215, 0.2);
+    --gray-back-one: rgba(125, 125, 125, 0.9);
+    --gray-back-two: rgba(175, 175, 175, 1);
+    --gray-back-three: rgba(45, 45, 45, 1);
+    --gray-back-four: rgba(95, 95, 95, 1);
 }
 
 body {
@@ -34,16 +46,34 @@ pre {
     padding: 5px;
     padding-left: 25px;
     background-color: var(--backgrPre);
-    border-radius: 10;
+    border-radius: 10px;
 }
 
 .myCode {
-    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 3px;
+    font-size: 17px;
     padding: 5px;
     margin: 5px;
     padding-left: 25px;
+    border-radius: 10px;
     background-color: var(--backgrPre);
-    border-radius: 10;
+}
+
+.backOne {
+    background-color: var(--gray-back-one);
+}
+
+.backTwo {
+    background-color: var(--gray-back-two);
+}
+
+.backThree {
+    background-color: var(--gray-back-three);
+}
+
+.backFour {
+    background-color: var(--gray-back-four);
 }
 
 b {
