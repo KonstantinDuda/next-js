@@ -12,7 +12,7 @@ export default function TopMenu({
         <div className={style.main}>
             <div className={style.menuContainer}></div>
             <Menu menuClassName={style.menu} />
-            <SideMenu className={style.sideMenu}>sideMenu</SideMenu>
+            <SideMenu menuClassName={style.sideMenu} />
             <div className={style.dataDiv}>
                 {children}
             </div>

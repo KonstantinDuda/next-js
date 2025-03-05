@@ -6,7 +6,7 @@ import style from "@/app/ui/css/csslist.module.css";
 export default function LinkList() {
     return (
         <ul>
-        <div className={style.firstBox}>
+        <div id="cssLinks" className={style.firstBox}>
             <div className={style.firBlist}>
                 <li><a href="https://w3schoolsua.github.io/css/css_comments.html#gsc.tab=0">
                     Коментарі</a></li>

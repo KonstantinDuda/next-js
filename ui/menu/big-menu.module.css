@@ -1,13 +1,13 @@
 .divSelector {
     position: fixed;
     display: inline-block;
-    margin-left: 7%;
+    right: 310px;
 }
 
 .selector {
     background-color: rgba(0, 0, 0, 0);
     border: 0;
-    border-right: 3 solid gray;
+    border-left: 3 solid gray;
     position: fixed;
     top: 0;
     cursor: pointer;
@@ -15,13 +15,15 @@
 
 .selectorContent {
     display: none;
-    width: 150px;
+    width: 300px;
+    max-height: 700px;
     font-size: 20px;
     margin-top: 26px;
     background-color: var(--background);
     position: absolute;
     border: 1 solid gray;
     z-index: 1;
+    overflow-y: scroll;
 }
 
 .divSelector:hover .selectorContent {
@@ -34,4 +36,20 @@
     color: var(--foreground);
     text-decoration: none;
     border-right: 1 solid gray;
+}
+
+.liLinks {
+    display: block;
+    margin: 5px;
+    color: var(--foreground);
+    text-decoration: none;
+    border-bottom: 1 dashed gray;
+}
+
+.selectorUl {
+    margin-top: 5px;
+}
+
+.selectorLi {
+    font-size: 17px;
 }

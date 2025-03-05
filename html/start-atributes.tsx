@@ -3,7 +3,7 @@ import React from 'react';
 export default function StartToAtributes() {
     return (
         <div>
-                <h3>Start-Atributes</h3> 
+                <h3 id="htmlStartAtributes">Start-Atributes</h3> 
                 Стандартні і обов&#39;язкові Теги: !DOCTYPE html, html, 
                 head (містить метаінформацію, я поки не знаю що це таке), 
                 title (назва документа), body

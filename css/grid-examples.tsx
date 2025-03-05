@@ -3,7 +3,7 @@ import style from "@/app/ui/css/adaptive.module.css"
 
 export default function GridExamples() {
     return (
-        <div className={style.myroot}>
+        <div className={style.myroot} id="cssGridExampls">
         <div className={style.myflex}>
             <div className={style.description}>
         Висота блоку з квадратами стане такою як висота текстового блоку якщо вкласти їх в 

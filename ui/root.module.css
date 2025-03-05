@@ -15,7 +15,6 @@
 
 .menu {
     font-size: 25px;
-    border-right: 3 solid gray;
     left: 10%;
     width: 100px;
     height: 30px;
@@ -25,13 +24,85 @@
 .sideMenu {
     font-size: 25px;
     text-align: end;
-    border-left: 3 solid gray;
     right: 7%;
-    width: 150px;
+    width: 220px;
     height: 30px;
     position: fixed;
 }
 
 .dataDiv {
     margin-top: 15px;
+}
+
+/* Спільне між меню і вторинним меню */
+.divSelector {
+    position: fixed;
+    display: inline-block;
+}
+
+.selector {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    border-left: 3 solid gray;
+    position: fixed;
+    top: 0;
+    cursor: pointer;
+}
+
+.selectorContent {
+    display: none;
+    font-size: 20px;
+    margin-top: 26px;
+    background-color: var(--background);
+    position: absolute;
+    border: 1 solid gray;
+    z-index: 1;
+}
+
+.divSelector:hover .selectorContent {
+    display: block;
+}
+
+.links {
+    display: block;
+    margin: 5px;
+    color: var(--foreground);
+    text-decoration: none;
+    border-right: 1 solid gray;
+}
+
+/* Меню */
+.divSelectorMenu {
+    margin-left: 7%;
+}
+
+.selectorContentMenu {
+    width: 150px;
+}
+
+/* Бокове меню */
+.divSelectorSideMenu {
+    right: 310px;
+}
+
+.selectorContentSideMenu {
+    width: 300px;
+    max-height: 700px;
+    overflow-y: scroll;
+}
+
+.liLinks {
+    display: block;
+    margin: 5px;
+    color: var(--foreground);
+    text-decoration: none;
+    border-bottom: 1 dashed gray;
+}
+
+.selectorUl {
+    margin-top: 5px;
+}
+
+.selectorLi {
+    font-size: 17px;
 }
