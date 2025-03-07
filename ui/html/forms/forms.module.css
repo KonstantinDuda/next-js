@@ -68,6 +68,16 @@
     }
 }
 
+@media screen and (max-width:600px) {
+    .inputTypes {
+        grid-template-columns: 100%;
+    }
+
+    .iTHead {
+        grid-column: 1 / 2;
+    }
+}
+
 .iTFormElements {
     display: grid;
     margin: 5px;

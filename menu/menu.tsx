@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import style from "@/app/ui/menu/menu.module.css"
+import style from "@/app/ui/menu/root.module.css"
 
 export default function Menu({
   menuClassName,
@@ -8,9 +8,10 @@ export default function Menu({
   menuClassName: string;
 }) {
     return (
-      <div className={style.divSelector}>
-      <button className={`${style.selector} ${menuClassName}`}>Меню</button>
-      <div className={style.selectorContent}>
+      <div className={`${style.divSelector} ${style.divSelectorMenu}`}>
+      <button className={`${style.selector} ${style.selectorMenu} ${menuClassName}`}>
+        Меню</button>
+      <div className={`${style.selectorContent} ${style.selectorContentMenu}`}>
         <Link className={style.links} href="/" >Головна</Link>
         <Link className={style.links} href="/first-days" >First days</Link>
         <Link className={style.links} href="/html" >HTML</Link>

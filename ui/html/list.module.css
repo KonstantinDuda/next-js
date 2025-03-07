@@ -19,3 +19,12 @@
     margin: 10px;
     width: 25%;
 }
+
+@media screen and (max-width:600px) {
+    .myFlex {
+        flex-wrap: wrap;
+    }
+    .myDiv {
+        width: 33%;
+    }
+}

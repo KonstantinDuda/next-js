@@ -1,6 +1,6 @@
 import React from "react";
 import Menu from './menu';
-import style from '@/app/ui/root.module.css';
+import style from '@/app/ui/menu/root.module.css';
 import SideMenu from './side-menu';
 
 export default function TopMenu({
