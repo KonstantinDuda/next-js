@@ -14,67 +14,82 @@ export default function SideMenu({
 
     if(pathname === '/html') {
       return (
-        <div className={`${style.divSelector} ${style.divSelectorSideMenu}`}>
-        <button className={`${menuClassName} ${style.selector} ${style.selectorSideMenu}`}>
-          Тонка навігація</button>
-        <div className={`${style.selectorContent} ${style.selectorContentSideMenu}`}>
-          <HTMLLinks /></div></div>);
+        <ListConstructor address="/html" name="HTML" menuClassName={menuClassName}>
+          <HTMLLinks />
+        </ListConstructor>);
     } else if(pathname === '/css') {
       return (
-        <div className={`${style.divSelector} ${style.divSelectorSideMenu}`}>
-        <button className={`${menuClassName} ${style.selector} ${style.selectorSideMenu}`}>
-          Тонка навігація</button>
-      <div className={`${style.selectorContent} ${style.selectorContentSideMenu}`}>
-        <CSSLinks /></div></div>);
+        <ListConstructor address="/css" name="CSS" menuClassName={menuClassName}>
+          <CSSLinks />
+        </ListConstructor>);
     } else if(pathname === '/type-script') {
       return (
-        <div className={`${style.divSelector} ${style.divSelectorSideMenu}`}>
-        <button className={`${menuClassName} ${style.selector} ${style.selectorSideMenu}`}>
-          Тонка навігація</button>
-      <div className={`${style.selectorContent} ${style.selectorContentSideMenu}`}>
-        <TypeScriptLinks /></div></div>);
+        <ListConstructor address="/type-script" name="TypeScript" 
+            menuClassName={menuClassName}>
+          <TypeScriptLinks />
+        </ListConstructor>);
     } else if(pathname === '/react') {
       return (
-        <div className={`${style.divSelector} ${style.divSelectorSideMenu}`}>
-        <button className={`${menuClassName} ${style.selector} ${style.selectorSideMenu}`}>
-          Тонка навігація</button>
-      <div className={`${style.selectorContent} ${style.selectorContentSideMenu}`}>
-        <ReactLinks /></div></div>);
+        <ListConstructor address="/react" name="React" menuClassName={menuClassName}>
+          <ReactLinks />
+        </ListConstructor>);
     } else if(pathname === '/next') {
       return (
-        <div className={`${style.divSelector} ${style.divSelectorSideMenu}`}>
-        <button className={`${menuClassName} ${style.selector} ${style.selectorSideMenu}`}>
-          Тонка навігація</button>
-      <div className={`${style.selectorContent} ${style.selectorContentSideMenu}`}>
-        <NextLinks /></div></div>);
+        <ListConstructor address="/next" name="Next.js" menuClassName={menuClassName}>
+          <NextLinks />
+        </ListConstructor>);
     } else {
     return (
-      <div className={`${style.divSelector} ${style.divSelectorSideMenu}`}>
-        <button className={`${menuClassName} ${style.selector} ${style.selectorSideMenu}`}>
-          Тонка навігація</button>
-        <div className={`${style.selectorContent} ${style.selectorContentSideMenu}`}>
+      <MyNav menuClassName={menuClassName}>
           <div>
             <Link className={style.links} href="/first-days" >First days</Link>
           </div>
-          <HTMLLinks />
-          <CSSLinks />
-          <TypeScriptLinks />
-          <ReactLinks />
-          <NextLinks />
-        </div>
-      </div>
+          <MyLink address="/html" name="HTML">
+            <HTMLLinks /></MyLink>
+          <MyLink address="/css" name="CSS">
+            <CSSLinks /></MyLink>
+          <MyLink address="/type-script" name="TypeScript">
+            <TypeScriptLinks /></MyLink>
+          <MyLink address="/react" name="React">
+            <ReactLinks /></MyLink>
+          <MyLink address="/next" name="Next.js">
+            <NextLinks /></MyLink>
+      </MyNav>
     );}
 }
 
-function ListConstructor({address, name, children}: 
+function MyNav({children, menuClassName}: 
+  {children: React.ReactNode, menuClassName: string;}) {
+  return (
+    <div className={`${style.divSelector} ${style.divSelectorSideMenu}`}>
+      <button className={`${menuClassName} ${style.selector} ${style.selectorSideMenu}`}>
+        Тонка навігація</button>
+      <div className={`${style.selectorContent} ${style.selectorContentSideMenu}`}>
+        {children}
+      </div>
+    </div>
+  );
+}
+function MyLink({address, name, children}: 
   {address: string, name: string, children: React.ReactNode;}) {
   return (
-  <div>
-    <Link className={style.links} href={address} >{name}</Link>
+    <>
+      <Link className={style.links} href={address} >{name}</Link>
       <ul className={style.selectorUl}>
-            {children}
+        {children}
       </ul>
-  </div>
+    </>
+  );
+}
+
+function ListConstructor({address, name, children, menuClassName}: 
+  {address: string, name: string, children: React.ReactNode, menuClassName: string;}) {
+  return (
+    <MyNav menuClassName={menuClassName}>
+      <MyLink address={address} name={name}>
+        {children}
+      </MyLink>
+    </MyNav>
   );
 }
 
@@ -100,13 +115,11 @@ function HTMLLinks() {
     {name: "Стартові атрибути", address: "/html#htmlStartAtributes"},
     ];
 
-  return (
-    <ListConstructor address="/html" name="HTML">
+  return (<>
       {htmlLinks.map((link, index) => (
         <li className={style.selectorLi} key={index}><Link className={style.liLinks} 
           href={link.address}>{link.name}</Link></li>
-      ))}
-    </ListConstructor>
+      ))}</>
   );
 }
 
@@ -120,12 +133,12 @@ function CSSLinks() {
   ];
 
   return (
-    <ListConstructor address="/css" name="CSS">
+    <>
       {cssLinks.map((link, index) => (
         <li className={style.selectorLi} key={index}><Link className={style.liLinks} 
           href={link.address}>{link.name}</Link></li>
       ))}
-    </ListConstructor>
+    </>
   );
 }
 
@@ -142,12 +155,12 @@ function TypeScriptLinks() {
     {name: "Генерики",        address: "/type-script#tsGenerics"},];
 
   return (
-    <ListConstructor address="/type-script" name="TypeScript">
+    <>
       {tsLinks.map((link, index) => (
         <li className={style.selectorLi} key={index}><Link className={style.liLinks} 
           href={link.address}>{link.name}</Link></li>
       ))}
-    </ListConstructor>
+    </>
   );
 }
 
@@ -159,12 +172,12 @@ function ReactLinks() {
   ];
 
   return (
-    <ListConstructor address="/react" name="React">
+    <>
       {reactLinks.map((link, index) => (
         <li className={style.selectorLi} key={index}><Link className={style.liLinks} 
           href={link.address}>{link.name}</Link></li>
       ))}
-    </ListConstructor>
+    </>
   );
 }
 
@@ -174,12 +187,12 @@ function NextLinks() {
     {name: "Власна тема",     address: "/next#nextMyOwnTheme"},];
 
   return (
-    <ListConstructor address="/next" name="Next.js">
+    <>
       {nextLinks.map((link, index) => (
         <li className={style.selectorLi} key={index}><Link className={style.liLinks} 
           href={link.address}>{link.name}</Link></li>
       ))}
-    </ListConstructor>
+    </>
   );
 }
 
