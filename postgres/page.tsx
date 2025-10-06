@@ -37,7 +37,7 @@ export default function Postgres() {
         &#8195; Отже треба написати CREATE TABLE, потім назву таблиці, в дужках назви
         колонок та їх типи через кому. Важливо не забути про semicolon. одразу виникає 
         питання, а які бувають типи данних в Postgres? Думаю про це пізніше буде. Наразі 
-        варто запам'ятати <b>CREATE TABLE</b> - створити таблицю, <b>VARCHAR</b> - це 
+        варто запам&#39;ятати <b>CREATE TABLE</b> - створити таблицю, <b>VARCHAR</b> - це 
         текстовий тип данних (255 кількість символів), <b>INT</b> - це цілочисельний тип.
         Створити таблицю вийшло з другого разу. <br />
         &#8195; Наступна команда: <b>SELECT * FROM</b> cars<b>;</b> - перевірка таблиці по 
@@ -46,7 +46,7 @@ export default function Postgres() {
         Турбує те що термінал намагається видавати відповіді Українською мовою, а у нього не 
         виходить, тож я волів би перевести його на Англійську, та не знаю як. <br />
         &#8195; Щоб внести данні в таблицю використовується: <b>INSERT INTO</b> cars (brand, 
-        model, year) <b>VALUES</b> ('Ford', 'Mustang', 1964);. Цікаво чи важливо щоб 
+        model, year) <b>VALUES</b> (&#39;Ford&#39;, &#39;Mustang&#39;, 1964);. Цікаво чи важливо щоб 
         послідовність в інсерті відповідала послідовності яка була вказана при створені 
         таблиці. З іншого боку очевидно що в інсерті та волью вони мають бути відповідними. 
         Перевірив, послідовність не залежить від того якою ви її зробили при створенні. 
@@ -63,12 +63,12 @@ export default function Postgres() {
         можливо, але зворотню операцію таблиця не виконає. Цією командою можна змінити 
         кількість символів кольору, наприклад і т.і. Видалити колонку: <b>ALTER TABLE
         </b> cars <b>DROP COLUMN color;</b>. <br />
-        &#8195; <b>UPDATE</b> cars <b>SET</b> color = 'red' <b>WHERE</b> brand = 'Ford'; 
-        - оновлення данних колонки. Важливо запам'ятати що данна команда впливає на 
+        &#8195; <b>UPDATE</b> cars <b>SET</b> color = &#39;red&#39; <b>WHERE</b> brand = &#39;Ford&#39;; 
+        - оновлення данних колонки. Важливо запам&#39;ятати що данна команда впливає на 
         данні що вже існують в таблиці, на відміну від попередньої команди, що змінювала 
         саму таблицю. Якщо все зроблено правильно то відповідь буде <b>UPDATE 1</b>.
         Якщо пропустити Where то вся колонка буде змінена, це теж може знадобитись. <br />
-        &#8195; <b>DELETE FROM</b> cars <b>WHERE</b> brand = 'Ford'; - видалення данних з 
+        &#8195; <b>DELETE FROM</b> cars <b>WHERE</b> brand = &#39;Ford&#39;; - видалення данних з 
         рядка таблиці. Якщо все зроблено правильно то відповідь буде <b>DELETE 1</b>. Важливо 
         розуміти що сам рядок залишиться але не матиме данних. Якщо пропустити Where то
         очиститься вся таблиця що буде ідентичним команді: <b>TRUNCATE TABLE</b> cars; <br />
@@ -160,24 +160,24 @@ export default function Postgres() {
                 </tr>
             </tbody>
         </table>
-        Запит робиться так: <b>SELECT * FROM</b> cars <b>WHERE</b> brand = 'Ford';. <br />
-        Використання AND: <b>SELECT * FROM</b> cars <b>WHERE</b> brand = 'Ford' <b>AND
-            </b> model = 'Mustang';. <br />
-        Використання OR: <b>SELECT * FROM</b> cars <b>WHERE</b> brand = 'Ford' <b>OR</b> model 
-            = 'Mustang';. <br />
+        Запит робиться так: <b>SELECT * FROM</b> cars <b>WHERE</b> brand = &#39;Ford&#39;;. <br />
+        Використання AND: <b>SELECT * FROM</b> cars <b>WHERE</b> brand = &#39;Ford&#39; <b>AND
+            </b> model = &#39;Mustang&#39;;. <br />
+        Використання OR: <b>SELECT * FROM</b> cars <b>WHERE</b> brand = &#39;Ford&#39; <b>OR</b> model 
+            = &#39;Mustang&#39;;. <br />
         Використання BETWEEN: <b>SELECT * FROM</b> cars <b>WHERE</b> year <b>BETWEEN
             </b> 1960 <b>AND</b> 1970;. <br /> 
-        Використання IN: <b>SELECT * FROM</b> cars <b>WHERE</b> brand <b>IN</b> ('Ford', 
-            'Volvo');. <br />
-        Використання LIKE: <b>SELECT * FROM</b> cars <b>WHERE</b> model <b>LIKE</b> 'M%';. <br />
-        Використання ILIKE: <b>SELECT * FROM</b> cars <b>WHERE</b> model <b>ILIKE</b> 'm%';. <br />
-        Використання НЕ: <b>SELECT * FROM</b> cars <b>WHERE NOT</b> brand = 'Ford';. <br />
+        Використання IN: <b>SELECT * FROM</b> cars <b>WHERE</b> brand <b>IN</b> (&#39;Ford&#39;, 
+            &#39;Volvo&#39;);. <br />
+        Використання LIKE: <b>SELECT * FROM</b> cars <b>WHERE</b> model <b>LIKE</b> &#39;M%&#39;;. <br />
+        Використання ILIKE: <b>SELECT * FROM</b> cars <b>WHERE</b> model <b>ILIKE</b> &#39;m%&#39;;. <br />
+        Використання НЕ: <b>SELECT * FROM</b> cars <b>WHERE NOT</b> brand = &#39;Ford&#39;;. <br />
         Використання НЕ з іншими операторами: <b>SELECT * FROM</b> cars <b>WHERE
-            </b> brand <b>NOT IN</b> ('Volvo', 'Mersedes', 'Toyota');. <br />
-        <b>SELECT * FROM</b> cars <b>WHERE</b> brand <b>NOT ILIKE</b> 'b%';. (Виведе всі 
+            </b> brand <b>NOT IN</b> (&#39;Volvo&#39;, &#39;Mersedes&#39;, &#39;Toyota&#39;);. <br />
+        <b>SELECT * FROM</b> cars <b>WHERE</b> brand <b>NOT ILIKE</b> &#39;b%&#39;;. (Виведе всі 
         значення де бренд починається не з b, не зважаючи на регістр) <br />
         У мене таблиця з автівками практично пуста тож я перевірю наприклад на orders що 
-        для мене люб'язно створили раніше. Наприклад: SELECT customer_id, order_date FROM 
+        для мене люб&#39;язно створили раніше. Наприклад: SELECT customer_id, order_date FROM 
         orders WHERE customer_id BETWEEN 3 AND 6;, видало 45 пар, та довелось кілька 
         разів тицяти на Enter. Задав діапазон 4 - 6, отримав 38 результатів. Отже трійок 
         має бути 7. Перевірю: SELECT * FROM orders WHERE customer_id = 3; Все вірно.
@@ -202,12 +202,12 @@ export default function Postgres() {
         37 значень, адже таблиця має лише 77 колонок.
         <h3>MIN та MAX</h3>
         <b>SELECT MIN</b>(price) <b>FROM</b> products; - виведе найдешевший товар. Такий 
-        самий синтаксис у MAX. <b>AS</b> - дозволяє надати ім'я результату: SELECT MIN(price) 
+        самий синтаксис у MAX. <b>AS</b> - дозволяє надати ім&#39;я результату: SELECT MIN(price) 
         AS lowest_price FROM products;
         <h3>Кількість</h3>
         <b>SELECT COUNT</b>(customer_id) <b>FROM</b> customers; - виведе кількість 
         ідентифікаторів. Спіцефічні данні можна отримати за допомогою WHERE: <b>SELECT 
-            COUNT</b>(customer_id) <b>FROM</b> customers <b>WHERE</b> city = 'London';
+            COUNT</b>(customer_id) <b>FROM</b> customers <b>WHERE</b> city = &#39;London&#39;;
         <h3>Сумма</h3>
         Сумму числових значень можна отримати за допомогою SUM: <b>SELECT SUM
             </b>(quantity) <b>FROM</b> order_details;
@@ -218,16 +218,16 @@ export default function Postgres() {
             </b>(price)::NUMERIC(10,2) FROM products;
         <h3>LIKE</h3>
         <b>LIKE</b> - використовується в конструкції з WHERE. <b>SELECT * FROM
-            </b> customers <b>WHERE</b> customer_name <b>LIKE</b> 'A%'; - запит на всі імена 
+            </b> customers <b>WHERE</b> customer_name <b>LIKE</b> &#39;A%&#39;; - запит на всі імена 
         що починаються з великої літери А і умовно необмеженої кількості символів після нього.
         Якщо %а% то всі імена з маленькою літерою А що не є першою і останньою літерою. Якщо 
         не важливо велика літера чи маленька то є <b>ILIKE</b>. Якщо вам потрібно обмежити 
         кількість літер то можна зробити запит: <b>SELECT * FROM</b> customers <b>WHERE
-            </b> city <b>LIKE</b> '____'; - в данному випадку 4 літери. Будь яку можна задати.
+            </b> city <b>LIKE</b> &#39;____&#39;; - в данному випадку 4 літери. Будь яку можна задати.
         <h3>IN</h3>
         Використовується в конструкції з WHERE. Також може бути використано з NOT:<b>SELECT 
-            * FROM</b> customers <b>WHERE</b> country <b>NOT IN</b> ('Germany', 'France', 
-        'UK'); Також IN та NOT IN ьщжна використати з <b>SELECT</b>: <b>SELECT * FROM 
+            * FROM</b> customers <b>WHERE</b> country <b>NOT IN</b> (&#39;Germany&#39;, &#39;France&#39;, 
+        &#39;UK&#39;); Також IN та NOT IN ьщжна використати з <b>SELECT</b>: <b>SELECT * FROM 
             </b> customers <b>WHERE</b> customer_id <b>IN</b> (<b>SELECT</b> customer_id <b>
             FROM</b> orders); - Так, тут треба розібратись. Треба дивитись від крапки з комою. 
         Отже в лапках ми беремо customer_id з orders, з цього створюється список з якого 
@@ -242,7 +242,7 @@ export default function Postgres() {
         враховуються. Виникає питання, як саме він видає значення, адже більшість таблиць не 
         будуть сортовані. У нас є таблиця з продуктами і ціни там не сортовані, от і 
         перевірю: <b>SELECT * FROM</b> products <b>WHERE</b> price <b>BETWEEN</b> 6 <b>
-            AND</b> 9.20; - Пам'ятаємо що ці значення включені. Отримав не ті продукти що 
+            AND</b> 9.20; - Пам&#39;ятаємо що ці значення включені. Отримав не ті продукти що 
         знаходяться між 13 і 19 по product_id, а математично. Це логічно. Тож щоб 
         отримати те що я описав треба навчитись робити складніші запити. Будьте уважні 
         якщо користуєтесь <a 
@@ -251,19 +251,19 @@ export default function Postgres() {
         результат, але варто бути уважним, якщо створена таблиця в нижньому регістрі то 
         певне так до неї і варто звертатись, адже може бути інша таблиця але з першою 
         літерою у верхньому регістрі. Також WHERE працює і з текстовими данними: <b>SELECT * 
-            FROM</b> products <b>WHERE</b> product_name <b>BETWEEN</b> 'Pavlova' <b>AND
-                </b> 'Tofu'; - результат має бути базованим на алфавітній послідовності. 
+            FROM</b> products <b>WHERE</b> product_name <b>BETWEEN</b> &#39;Pavlova&#39; <b>AND
+                </b> &#39;Tofu&#39;; - результат має бути базованим на алфавітній послідовності. 
         Я отримав лист з 23 значень і спочатку не зрозумів чому. Але сортування допомогло з 
         цим: <b>SELECT * FROM</b> products <b>WHERE</b> product_name <b>BETWEEN
-            </b> 'Pavlova' <b>AND</b> 'Tofu' <b>ORDER BY</b> product_name;
-        <h3>AS та об'єднання строк</h3>
+            </b> &#39;Pavlova&#39; <b>AND</b> &#39;Tofu&#39; <b>ORDER BY</b> product_name;
+        <h3>AS та об&#39;єднання строк</h3>
         Псевдоніми створюються за допомогою <b>AS</b>. При цьому саме ключове слово можна 
-        пропустити. Використовується при об'єднанні строк.  Об'єднання виконується за 
+        пропустити. Використовується при об&#39;єднанні строк.  Об&#39;єднання виконується за 
         допомогою &#124;&#124;.
         <h3>JOIN</h3>
-        Використовується для об'єднання рядків на основі стовбця між ними. Не зовсім 
+        Використовується для об&#39;єднання рядків на основі стовбця між ними. Не зовсім 
         зрозуміло. У нас є таблицi products та categories і в обох є стовбці category_id. 
-        Об'єднання можуть бути: <a 
+        Об&#39;єднання можуть бути: <a 
         href="https://www.w3schools.com/postgresql/postgresql_inner_join.php">
             <b>INNER</b></a> - Повертає записи, які мають відповідні 
         значення в обох таблицях. Є значенням за замовченням. <a 
@@ -312,7 +312,7 @@ export default function Postgres() {
             SUM</b>(products.price) &#62; 1000.00;
         </div> 
         Отже ми отримуємо дві колонки, імена та сумму цін продуктів. From order_details для 
-        мене не зрозуміла деталь. Потім ми об'єднуємо кілька рядків по принципу, беремо всі 
+        мене не зрозуміла деталь. Потім ми об&#39;єднуємо кілька рядків по принципу, беремо всі 
         записи з лівої таблиці і тільки співпадаючі з правої що дорівнюють ще певним 
         характеристикам та групуємо їх в загальний рядок при умові що сумма цін продуктів 
         більша за 1000.00. Ну, наразі я би точно не додумався до такого запису! 
@@ -343,15 +343,15 @@ export default function Postgres() {
 
         <h3>CASE ELSE</h3>
         Це Розгалуження. Виконується з <b>WHEN</b> та <b>END</b>. Можна використати AS 
-        щоб назначити ім'я колонки. 
+        щоб назначити ім&#39;я колонки. 
         <div className="code">
             <b>SELECT</b> product_name, <br />
             <b>CASE</b> <br />
-            &#8195; <b>WHEN</b> price &#60; 10 <b>THEN</b> 'Low price product' <br />
-            &#8195; <b>WHEN</b> price &#62; 50 <b>THEN</b> 'High price product' <br />
+            &#8195; <b>WHEN</b> price &#60; 10 <b>THEN</b> &#39;Low price product&#39; <br />
+            &#8195; <b>WHEN</b> price &#62; 50 <b>THEN</b> &#39;High price product&#39; <br />
             <b>ELSE</b> <br />
-            &#8195; 'Normal product' <br />
-            <b>END AS</b> "price category" <br />
+            &#8195; &#39;Normal product&#39; <br />
+            <b>END AS</b> &#34;price category&#34; <br />
             <b>FROM</b> products;
         </div>
         <h3><a href="https://www.w3schools.com/postgresql/postgresql_exercises.php">Вправи</a></h3>
@@ -359,7 +359,7 @@ export default function Postgres() {
         
         
         
-        <h3>Dashboard продовжуння</h3>
+        <h3>Dashboard продовжeння</h3>
         Подальші дії виконуються в окремому проекті що я почав з самого початку по <a 
         href="https://nextjs.org/learn/dashboard-app"> данному 
         туторіалу</a> <br />
@@ -388,18 +388,18 @@ export default function Postgres() {
         <div className="code">
             <b>INSERT INTO</b> customers (id, name, email, image_url) <br />
             <b>VALUES</b> <br />
-            &#8195;  ('d6e15727-9fe1-4961-8c5b-ea44a9bd81aa', 'Evil Rabbit', 
-                'evil@rabbit.com', '/customers/evil-rabbit.png'), <br />
-            &#8195;  ('3958dc9e-712f-4377-85e9-fec4b6a6442a', 'Delba de Oliveira', 
-                'delba@oliveira.com', '/customers/delba-de-oliveira.png'), <br />
-            &#8195;  ('3958dc9e-742f-4377-85e9-fec4b6a6442a', 'Lee Robinson', 
-                'lee@robinson.com', '/customers/lee-robinson.png'), <br />
-            &#8195;  ('76d65c26-f784-44a2-ac19-586678f7c2f2', 'Michael Novotny', 
-                'michael@novotny.com', '/customers/michael-novotny.png'), <br />
-            &#8195;  ('CC27C14A-0ACF-4F4A-A6C9-D45682C144B9', 'Amy Burns', 'amy@burns.com', 
-                '/customers/amy-burns.png'), <br />
-            &#8195;  ('13D07535-C59E-4157-A011-F8D2EF4E0CBB', 'Balazs Orban', 
-                'balazs@orban.com', '/customers/balazs-orban.png'); <br />      
+            &#8195;  (&#39;d6e15727-9fe1-4961-8c5b-ea44a9bd81aa&#39;, &#39;Evil Rabbit&#39;, 
+                &#39;evil@rabbit.com&#39;, &#39;/customers/evil-rabbit.png&#39;), <br />
+            &#8195;  (&#39;3958dc9e-712f-4377-85e9-fec4b6a6442a&#39;, &#39;Delba de Oliveira&#39;, 
+                &#39;delba@oliveira.com&#39;, &#39;/customers/delba-de-oliveira.png&#39;), <br />
+            &#8195;  (&#39;3958dc9e-742f-4377-85e9-fec4b6a6442a&#39;, &#39;Lee Robinson&#39;, 
+                &#39;lee@robinson.com&#39;, &#39;/customers/lee-robinson.png&#39;), <br />
+            &#8195;  (&#39;76d65c26-f784-44a2-ac19-586678f7c2f2&#39;, &#39;Michael Novotny&#39;, 
+                &#39;michael@novotny.com&#39;, &#39;/customers/michael-novotny.png&#39;), <br />
+            &#8195;  (&#39;CC27C14A-0ACF-4F4A-A6C9-D45682C144B9&#39;, &#39;Amy Burns&#39;, &#39;amy@burns.com&#39;, 
+                &#39;/customers/amy-burns.png&#39;), <br />
+            &#8195;  (&#39;13D07535-C59E-4157-A011-F8D2EF4E0CBB&#39;, &#39;Balazs Orban&#39;, 
+                &#39;balazs@orban.com&#39;, &#39;/customers/balazs-orban.png&#39;); <br />      
         </div>
         Потім змінив файл app/lib/data.ts за прикладом. <br /><br />
 
@@ -466,7 +466,7 @@ export default function Postgres() {
         loading.tsx</b> або на рівні компонентів для більшого роздрібнення. Контент з 
         loading.tsx файлу показується клієнту поки данні завантажуються. Він створюється на 
         рівні page.tsx файлу. Інколи отримую помилку: Each child in a list should have a 
-        unique "key" prop, та поки ігнорую її. Так як теки customers та invoices знаходяться на 
+        unique &#34;key&#34; prop, та поки ігнорую її. Так як теки customers та invoices знаходяться на 
         рівні loading файлу то він впливає і на них. Та це можна змінити створивши теку <b>
         (overview)</b> та поклавши в неї page та loading. Тепер loading та page це окрема група, 
         завдяки тому що тека з назвою в лапках не включається в загальний URL шлях. Тобто це 
@@ -489,7 +489,7 @@ export default function Postgres() {
         з fetchFilteredInvoices. Я так подумав. Хоча вірогідно я помиляюсь адже в підручнику 
         про це ні словом не обмовились. А в @/app/lib/definitions схоже що мені підходить 
         InvoicesTable але його імпорт викликає конфлікт імен. Тож я за допомогою пошуку 
-        з'ясував що InvoicesTable з дефініцій використовується лиш в 3 файлах, тож в 
+        з&#39;ясував що InvoicesTable з дефініцій використовується лиш в 3 файлах, тож в 
         дефініціях я перейменував його на InvoiceTable (прибрав s), переписав це в імпортах в 
         app/lib/data, тоді в app/ui/invoices/table імпортував цю таблицю та зробив константу 
         invoices масивом цих таблиць: const invoices: InvoiceTable [] = await 
@@ -511,8 +511,8 @@ export default function Postgres() {
         href="https://nextjs.org/learn/dashboard-app/mutating-data">Mutating data</a></h3>
         В тегу form є атрибут <ins>action</ins> і він дозволяє викликати події. Далі по 
         підручнику ми створювали запит sql в файлі action.ts що створили. Тут як і раніше я 
-        створив const connectionPool = require('@/db'); та робив запит через нього, а також 
-        варто не забути взяти в лапки '' кожне значення в VALUES. Потім використовується 
+        створив const connectionPool = require(&#39;@/db&#39;); та робив запит через нього, а також 
+        варто не забути взяти в лапки &#39;&#39; кожне значення в VALUES. Потім використовується 
         revalidatePath, щоб очистити кеш. Це потрібно тому-що данні зміняться, а вони ж 
         відображаються, я так це зрозумів. Моя неуважність знову показалась. Я тільки зараз 
         помітив що в кінці запитів до БД немає крапки з комою... За підручником далі має 
@@ -550,7 +550,7 @@ export default function Postgres() {
         Конструкція виглядає так: <b>try</b> &#123; &#125; <b>catch</b> (error) &#123; &#125; 
         В прикладі їм огортають звернення до БД. В свою чергу redirect варто викликати за 
         межами try/catch блоку. Штучно викликати помилку можна за допомогою <b>throw
-        </b> new Error('message'). Для обробки помилок що виловить try в next.js створюють 
+        </b> new Error(&#39;message&#39;). Для обробки помилок що виловить try в next.js створюють 
         окремий файл <b>error.tsx</b> (слугує для усунення несподіваних помилок і 
         відображенню користувачу резервного інтерфейсу). В ньому можна обробити помилку. <b>
             reset</b> - функція що рендерить компонент наново. <b>notFound</b> - функція яку 
@@ -561,7 +561,7 @@ export default function Postgres() {
         <h3><a href="https://nextjs.org/learn/dashboard-app/improving-accessibility">Improving Accessibility
             </a></h3>
         Перевірити форму на стороні клієнта можна за допомогою атрибута <ins>required</ins> в 
-        інпутах. Це обов'язкове поле, без якого форма не відправиться. <br />  
+        інпутах. Це обов&#39;язкове поле, без якого форма не відправиться. <br />  
         На стороні сервера використовується хук <b>useActionState</b> from react. Не забудьте 
         вказати use client. <a href="https://nextjs.org/learn/dashboard-app/improving-accessibility#server-side-validation
         ">Ознайомитись з хуком</a>. Потім в action.ts, в FormScheme треба додати обробку 
@@ -570,7 +570,7 @@ export default function Postgres() {
         ласка введіть значення більше за 0&#39; &#125;), для перелічень z.enum(&#91;
         &#39;pending&#39;, &#39;paid&#39; &#93;,  &#123;invalid_type_error: &#39;Оберіть 
         статус будь ласка&#39; &#125;). І в createInvoice замість звичайного parse 
-        використовується safeParse, якщо користуватись Zod. Але цей метод повертає об'єкт 
+        використовується safeParse, якщо користуватись Zod. Але цей метод повертає об&#39;єкт 
         або помилку, тож результат цього методу це одна змінна, а не <ins>n</ins> як було. 
         Тож тепер треба переписати і такі речі що спирались на кожну з тих змінних, це 
         наприклад amount. Та перед тим треба перевірити чи повернулась помилка, це можна 
@@ -578,7 +578,7 @@ export default function Postgres() {
         <div className="code"> if(!validatedFields.success) &#123; <br /> 
         &#8195; return &#123; <br /> 
         &#8195; &#8195; errors: validatedFields.error.flatten().fieldErrors, <br />
-        &#8195; &#8195; message: 'Missing Fields. Failed to Create Invoice.', <br />
+        &#8195; &#8195; message: &#39;Missing Fields. Failed to Create Invoice.&#39;, <br />
         &#8195; &#125;; <br />
         &#125;
         </div> 

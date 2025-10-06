@@ -5,7 +5,7 @@
 }
 
 .colorTableTr:nth-child(odd) {
-    background-color: rgba(180, 180, 180, 0.7);
+    background-color: var(--table-back); /* it was rgba(180, 180, 180, 0.7); */
 }
 
 .colorTableTh, .colorTableTd {
@@ -13,6 +13,6 @@
 }
 
 .colorTableTh:nth-child(even), .colorTableTd:nth-child(even) {
-    background-color: rgba(180, 180, 180, 0.7);
+    background-color: var(--table-back); /* it was rgba(180, 180, 180, 0.7); */
 }
 

@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function ReactNext() {
     return (
     <>
-    <h1 id="nextReactNext">React та Next.js</h1>
+    <h3 id="nextReactNext">React та Next.js</h3>
     Думки навчитись користуватись саме фрейморком Next.js привели мене до <Link
     href="https://nextjs.org/learn/react-foundations/what-is-react-and-nextjs"
     target="_blank" rel="noreferrer">цього посібника</Link>. Мені здавалось що в 
@@ -13,7 +13,8 @@ export default function ReactNext() {
     перший, <Link 
     href="https://nextjs.org/learn/react-foundations/building-ui-with-components#nesting-components"> але 
     рендерять перший</Link>. Тож помилитись можуть навіть ті хто навчають, уважність вельме 
-    важлива в програмуванні! Там пізніше про це написали, а я думав що вони помилились. 
+    важлива в програмуванні! Там пізніше про це написали, а я думав що вони помилились. Всеж 
+    в знайшов корисні речі, хоча вони стосувались TypeScript. 
     
     </>
     );

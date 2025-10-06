@@ -1,0 +1,12 @@
+.body {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    top: 0;
+}
+
+.divChildren {
+    bottom: 0;
+}

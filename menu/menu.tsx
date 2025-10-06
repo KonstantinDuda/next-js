@@ -19,6 +19,7 @@ export default function Menu({
         <Link className={style.links} href="/type-script" >TypeScripte</Link>
         <Link className={style.links} href="/react" >React</Link>
         <Link className={style.links} href="/next" >Next.js</Link>
+        <Link className={style.links} href="/english" >English</Link>
         </div>
       </div>
     );
