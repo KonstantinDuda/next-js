@@ -215,7 +215,6 @@ function NextLinks() {
 
 function EnglishLinks() {
   const englishLinks: { name: string, address: string }[] = [
-    { name: "Словник", address: "/english/dictionary" },
     { name: "Блог", address: "/english/blog" },
   ];
   return (
