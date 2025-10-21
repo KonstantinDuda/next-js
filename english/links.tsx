@@ -5,8 +5,8 @@ export default function LinkList() {
     return (
         <div>
             <h3>Link list:</h3>
-            <Link href='/english/dictionary'>Словник</Link> <br />
             <Link href='/english/blog/persuasion'>Persuasion</Link> <br />
+            <Link href='/english/blog/you-tube'>Data Youtube</Link> <br />
         </ div>
     );
 }

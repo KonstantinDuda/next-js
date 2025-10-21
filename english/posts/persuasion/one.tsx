@@ -1,12 +1,11 @@
 import React from 'react'
-import LinkList from '../../links';
 
 import style from "@/app/ui/english/blog/blog.module.css";
 
 export default function PersuasionOne() {
     return (
         <>
-            <a href='https://dictionary.cambridge.org/dictionary/english-ukrainian/amusement'
+            <br />&#8195; <a href='https://dictionary.cambridge.org/dictionary/english-ukrainian/amusement'
                 title='An entertainmant or interest. The state of being amused or of finding something funny'
                 target='_blank' rel='noreferrer'>amusement</a> додано до словника. <br />
             Я вже зустрічав раніше подібне використання <b>but</b> як в цій частині
@@ -99,9 +98,10 @@ export default function PersuasionOne() {
             Сподіваюсь це не зробить вивчення слів складнішим.
 
 
-
+            <a href=''
+                title=''
+                target='_blank' rel='noreferrer'></a>
             <div className={style.idDate}>07.10.2025 - 13.10.2025</div>
-            <LinkList />
         </>
     );
 }
