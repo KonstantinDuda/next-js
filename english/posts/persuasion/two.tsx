@@ -6,7 +6,7 @@ export default function PersuasionTwo() {
     return (
         <>
             <div className={style.persuasionTwoFlex}>
-                <div className={style.persuasionTwo}><br />&#8195; <a href='https://dictionary.cambridge.org/dictionary/english-ukrainian/vanity?q=vanity'
+                <div><br />&#8195; <a href='https://dictionary.cambridge.org/dictionary/english-ukrainian/vanity?q=vanity'
                     title="Expressive admiration of oneself. Worthlessness or pointlessness. Conceit"
                     target='_blank' rel='noreferrer'>vanity</a> - вагома характеристика сера
                     Волтера Еліота. Він <a

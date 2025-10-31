@@ -39,7 +39,8 @@ export default function SideMenu({
       <ListConstructor address="/next" name="Next.js" menuClassName={menuClassName}>
         <NextLinks />
       </ListConstructor>);
-  } else if (pathname === '/english') {
+  } else if (pathname === '/english' || pathname === '/english/blog/persuasion'
+    || pathname === '/english/blog/you-tube' || pathname === '/english/blog') {
     return (
       <ListConstructor address="/english" name="English" menuClassName={menuClassName}>
         <EnglishLinks />
@@ -216,6 +217,8 @@ function NextLinks() {
 function EnglishLinks() {
   const englishLinks: { name: string, address: string }[] = [
     { name: "Блог", address: "/english/blog" },
+    { name: "Блог: Persuasion", address: "/english/blog/persuasion" },
+    { name: "Блог: YouTube", address: "/english/blog/you-tube" }
   ];
   return (
     <>

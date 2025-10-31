@@ -8,12 +8,13 @@
 }
 
 .persuasionTwoText {
+    width: 49%;
     order: 1;
 }
 
 .persuasionTwoImage {
     order: 2;
-    width: 800px;
+    width: 50%;
     height: auto;
     margin-left: 10px;
 }
@@ -23,8 +24,13 @@
         flex-direction: column;
     }
 
+    .persuasionTwoText {
+        width: 99%;
+    }
+
     .persuasionTwoImage {
         margin-top: 10px;
+        width: 99%;
     }
 }
 
@@ -33,9 +39,13 @@
         flex-direction: column;
     }
 
+    .persuasionTwoText {
+        width: 99%;
+    }
+
     .persuasionTwoImage {
         margin-top: 10px;
         margin-left: 0px;
-        width: 98%;
+        width: 99%;
     }
 }
