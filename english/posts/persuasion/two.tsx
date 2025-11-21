@@ -24,16 +24,18 @@ export default function PersuasionTwo() {
                     звернутись до ШІ, до якого інколи таки доводиться звернутись. Речення:
                     <blockquote>His good looks and his rank had one fair claim on his attachment;
                         since to them he must have owed a wife of very superior character to any
-                        thing deserved by his own. </ blockquote> Я бачу це приблизно так: <i>Його
-                            гарний вигляд та ранг мав один</i> <ins>fair claim on his attachment
-                    </ins>; Я пам&#39;ятаю що <b>touch</b> - дотик, а <b>attachment</b> - щось дотичне,
+                        thing deserved by his own. </ blockquote>
+                    Я бачу це приблизно так: <i>Його гарний вигляд та ранг мав один</i> <ins>fair
+                        claim on his attachment</ins>; <br />
+                    Я пам&#39;ятаю що <b>touch</b> - дотик, а <b>attachment</b> - щось дотичне,
                     наближенність. Якось так я це запам&#39;ятав. <ins>fair claim on his attachment </ins>
                     - тут я лишив разом тому що перекладати дослівно не завжди має сенс, можна отримати
                     щось типу: <i>чесна претензія на його наближенність</i>. Що ніби не складається в
                     змістовне речення... Зато якщо перекласти одним шматком і поставити після того що
-                    я переклав власними силами то: <i>Його гарний вигляд та ранг мав одну справедливу
-                        вимогу щодо його прив&#39;язки</i> - що теж може виглядати як нісенітниця,
-                    але сподіваюсь стане зрозуміліше після перекладу другої частини речення.
+                    я переклав власними силами то: <blockquote><i>Його гарний вигляд та ранг мав одну
+                        справедливу вимогу щодо його прив&#39;язки</i></blockquote> - що теж може
+                    виглядати як нісенітниця, але сподіваюсь стане зрозуміліше після перекладу другої
+                    частини речення. <br />
                     Далі: <i>since to them he must have owed a wife of very superior character to any
                         thing deserved by his own.</i> <ins>since to them</ins> - я так розумію
                     мається на увазі якраз його вигляд і ранг. <ins>he must have owed a wife

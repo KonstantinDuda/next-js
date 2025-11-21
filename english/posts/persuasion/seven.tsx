@@ -137,7 +137,7 @@ export default function PersuasionSeven() {
                 </ul >
             </div>
             <h3>Capter 4 &#8657;</h3>
-            <div className={style.idDate}>3.11.2025 - 5.11.2025</div>
+            <div className={style.idDate}>03.11.2025 - 05.11.2025</div>
         </>
     );
 }
